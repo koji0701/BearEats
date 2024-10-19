@@ -17,6 +17,7 @@
 		E5C734482CC32E8A003223AF /* BearEatsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C734472CC32E8A003223AF /* BearEatsTests.swift */; };
 		E5C734522CC32E8A003223AF /* BearEatsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C734512CC32E8A003223AF /* BearEatsUITests.swift */; };
 		E5C734542CC32E8A003223AF /* BearEatsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C734532CC32E8A003223AF /* BearEatsUITestsLaunchTests.swift */; };
+		E5C734612CC33074003223AF /* testingFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C734602CC33074003223AF /* testingFile.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		E5C7344D2CC32E8A003223AF /* BearEatsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BearEatsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5C734512CC32E8A003223AF /* BearEatsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BearEatsUITests.swift; sourceTree = "<group>"; };
 		E5C734532CC32E8A003223AF /* BearEatsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BearEatsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		E5C734602CC33074003223AF /* testingFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testingFile.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 				E5C7342D2CC32E88003223AF /* AppDelegate.swift */,
 				E5C7342F2CC32E88003223AF /* SceneDelegate.swift */,
 				E5C734312CC32E88003223AF /* ViewController.swift */,
+				E5C734602CC33074003223AF /* testingFile.swift */,
 				E5C734332CC32E88003223AF /* Main.storyboard */,
 				E5C734392CC32E89003223AF /* Assets.xcassets */,
 				E5C7343B2CC32E89003223AF /* LaunchScreen.storyboard */,
@@ -261,6 +264,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5C734612CC33074003223AF /* testingFile.swift in Sources */,
 				E5C734382CC32E88003223AF /* BearEats.xcdatamodeld in Sources */,
 				E5C734322CC32E88003223AF /* ViewController.swift in Sources */,
 				E5C7342E2CC32E88003223AF /* AppDelegate.swift in Sources */,
