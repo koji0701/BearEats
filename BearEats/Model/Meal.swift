@@ -11,18 +11,16 @@ import Foundation
 struct Meal {
     let calories: Int
     let protein: Int
-    let fat: Int
+    let fats: Int
     let carbs: Int
     
     let mealName: String
-    let restaurantName: String
     
-    init(mealName: String, restaurantName: String, calories: Int, protein: Int, fat: Int, carbs: Int) {
+    init(mealName: String, calories: Int, protein: Int, fats: Int, carbs: Int) {
         self.calories = calories
         self.protein = protein
-        self.fat = fat
+        self.fats = fats
         self.carbs = carbs
         self.mealName = mealName
-        self.restaurantName = restaurantName
     }
 }

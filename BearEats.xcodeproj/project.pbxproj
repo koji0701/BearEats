@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		E503F6472CC35BEF0023B441 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = E503F6462CC35BEF0023B441 /* Meal.swift */; };
 		E54E36732CC3663000D223AD /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54E36722CC3663000D223AD /* Restaurant.swift */; };
+		E54E36782CC368F400D223AD /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54E36772CC368EC00D223AD /* Menu.swift */; };
+		E54E367A2CC373DD00D223AD /* Goals.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54E36792CC373DB00D223AD /* Goals.swift */; };
+		E54E367C2CC373F000D223AD /* CurrentMacros.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54E367B2CC373EB00D223AD /* CurrentMacros.swift */; };
 		E589C0622CC33B5500B33B03 /* GradientHorizontalProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E589C0612CC33B5400B33B03 /* GradientHorizontalProgressBar.swift */; };
 		E5C7342E2CC32E88003223AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C7342D2CC32E88003223AF /* AppDelegate.swift */; };
 		E5C734302CC32E88003223AF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C7342F2CC32E88003223AF /* SceneDelegate.swift */; };
@@ -42,6 +45,9 @@
 /* Begin PBXFileReference section */
 		E503F6462CC35BEF0023B441 /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
 		E54E36722CC3663000D223AD /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
+		E54E36772CC368EC00D223AD /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
+		E54E36792CC373DB00D223AD /* Goals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Goals.swift; sourceTree = "<group>"; };
+		E54E367B2CC373EB00D223AD /* CurrentMacros.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentMacros.swift; sourceTree = "<group>"; };
 		E589C0612CC33B5400B33B03 /* GradientHorizontalProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientHorizontalProgressBar.swift; sourceTree = "<group>"; };
 		E5C7342A2CC32E88003223AF /* BearEats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BearEats.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5C7342D2CC32E88003223AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -87,9 +93,12 @@
 		E54E36742CC3664F00D223AD /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				E54E36772CC368EC00D223AD /* Menu.swift */,
 				E503F6462CC35BEF0023B441 /* Meal.swift */,
 				E54E36722CC3663000D223AD /* Restaurant.swift */,
 				E589C0612CC33B5400B33B03 /* GradientHorizontalProgressBar.swift */,
+				E54E367B2CC373EB00D223AD /* CurrentMacros.swift */,
+				E54E36792CC373DB00D223AD /* Goals.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -278,11 +287,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E54E367A2CC373DD00D223AD /* Goals.swift in Sources */,
 				E5C734382CC32E88003223AF /* BearEats.xcdatamodeld in Sources */,
 				E5C734322CC32E88003223AF /* HomePageVC.swift in Sources */,
 				E589C0622CC33B5500B33B03 /* GradientHorizontalProgressBar.swift in Sources */,
 				E54E36732CC3663000D223AD /* Restaurant.swift in Sources */,
 				E5C7342E2CC32E88003223AF /* AppDelegate.swift in Sources */,
+				E54E367C2CC373F000D223AD /* CurrentMacros.swift in Sources */,
+				E54E36782CC368F400D223AD /* Menu.swift in Sources */,
 				E503F6472CC35BEF0023B441 /* Meal.swift in Sources */,
 				E5C734302CC32E88003223AF /* SceneDelegate.swift in Sources */,
 			);

@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -11,7 +12,7 @@
         <!--HomePageVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" userLabel="HomePageVC" customClass="ViewController" customModule="BearEats" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" userLabel="HomePageVC" customClass="HomePageVC" customModule="BearEats" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -26,8 +27,8 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="10" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="25P-jj-DGy">
                                                 <rect key="frame" x="0.0" y="0.0" width="360" height="21"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" ambiguous="YES" text="Protein" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Osq-5d-XF4" userLabel="Greeting">
-                                                        <rect key="frame" x="0.0" y="0.0" width="250.33333333333334" height="21"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Protein" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Osq-5d-XF4" userLabel="Greeting">
+                                                        <rect key="frame" x="0.0" y="0.0" width="309.66666666666669" height="21"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="21" id="jxC-hO-jcP"/>
@@ -36,21 +37,11 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="10" ambiguous="YES" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="0oN-FX-ZNJ">
-                                                        <rect key="frame" x="252.33333333333329" y="0.0" width="107.66666666666666" height="21"/>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="10" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="0oN-FX-ZNJ">
+                                                        <rect key="frame" x="311.66666666666669" y="0.0" width="48.333333333333314" height="21"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="100🔥" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EgK-Km-H8w" userLabel="Streak">
-                                                                <rect key="frame" x="0.0" y="0.0" width="51.333333333333336" height="21"/>
-                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="height" constant="21" id="yYb-ZR-fFw"/>
-                                                                </constraints>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                <nil key="textColor"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="253" verticalHuggingPriority="251" ambiguous="YES" text="101🎉" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ORw-FV-Y7x" userLabel="Likes">
-                                                                <rect key="frame" x="59.333333333333371" y="0.0" width="48.333333333333343" height="21"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="253" verticalHuggingPriority="251" text="101🎉" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ORw-FV-Y7x" userLabel="Protein Fraction">
+                                                                <rect key="frame" x="0.0" y="0.0" width="48.333333333333336" height="21"/>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="21" id="26F-mY-VWK"/>
@@ -62,9 +53,7 @@
                                                         </subviews>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
-                                                            <constraint firstItem="EgK-Km-H8w" firstAttribute="leading" secondItem="0oN-FX-ZNJ" secondAttribute="leading" id="X62-fQ-dQg"/>
                                                             <constraint firstAttribute="trailing" secondItem="ORw-FV-Y7x" secondAttribute="trailing" id="bEa-Yg-Jp7"/>
-                                                            <constraint firstItem="ORw-FV-Y7x" firstAttribute="leading" secondItem="EgK-Km-H8w" secondAttribute="trailing" constant="8" id="hzU-dd-f66"/>
                                                         </constraints>
                                                     </stackView>
                                                 </subviews>
@@ -87,22 +76,11 @@
                                                             <constraint firstAttribute="height" constant="25" id="fFh-8S-nJm"/>
                                                         </constraints>
                                                     </view>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ddv-oY-vEE" userLabel="Percentage">
-                                                        <rect key="frame" x="15.000000000000004" y="-0.66666666666665719" width="41.333333333333343" height="21"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="21" id="x3S-tM-MJA"/>
-                                                        </constraints>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="trailing" secondItem="Krb-ET-stT" secondAttribute="trailing" id="Wrg-qj-4KS"/>
-                                                    <constraint firstItem="ddv-oY-vEE" firstAttribute="centerY" secondItem="L3U-yu-1gd" secondAttribute="centerY" id="dJa-4b-7MT"/>
                                                     <constraint firstItem="Krb-ET-stT" firstAttribute="leading" secondItem="L3U-yu-1gd" secondAttribute="leading" id="dam-PX-SEv"/>
-                                                    <constraint firstItem="ddv-oY-vEE" firstAttribute="leading" secondItem="L3U-yu-1gd" secondAttribute="leading" constant="15" id="fdq-Cx-JKB"/>
                                                     <constraint firstItem="Krb-ET-stT" firstAttribute="centerY" secondItem="L3U-yu-1gd" secondAttribute="centerY" id="h8M-mU-Zwb"/>
                                                     <constraint firstAttribute="height" constant="20" id="tVB-AF-VtH"/>
                                                 </constraints>
@@ -126,8 +104,8 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
-                        <outlet property="proteinPercentageLabel" destination="ddv-oY-vEE" id="z6w-fn-pzv"/>
-                        <outlet property="proteinProgressBar" destination="Krb-ET-stT" id="7tK-Lx-FP3"/>
+                        <outlet property="proteinFractionLabel" destination="ORw-FV-Y7x" id="Deg-s4-205"/>
+                        <outlet property="proteinProgressBar" destination="Krb-ET-stT" id="hYw-v5-agA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -137,7 +115,7 @@
     </scenes>
     <resources>
         <systemColor name="quaternaryLabelColor">
-            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.17647058823529413" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.1764705882" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
