@@ -24,6 +24,9 @@ class HomePageVC: UIViewController {
         proteinFractionLabel.text = "\(CurrentMacros.protein) / \(Goals.protein)"
     }
     
-
+    @IBAction func addMealClicked(_ sender: Any) {
+        performSegue(withIdentifier: "HomeToNewMeal", sender: self)
+    }
+    
 }
 

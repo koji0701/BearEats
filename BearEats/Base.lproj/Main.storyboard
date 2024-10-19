@@ -99,18 +99,64 @@
                                     <constraint firstItem="QHd-oa-lVx" firstAttribute="leading" secondItem="FqN-BJ-vyK" secondAttribute="leading" constant="15" id="ZJe-AS-9h7"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zPN-h6-QCW" userLabel="AddMeal">
+                                <rect key="frame" x="159" y="753" width="75" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="OkD-cn-U2c"/>
+                                    <constraint firstAttribute="width" constant="75" id="bLb-uc-g7B"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Add"/>
+                                <connections>
+                                    <action selector="addMealClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aca-Sl-Nwe"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="zPN-h6-QCW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0fv-aj-dZS"/>
+                            <constraint firstItem="zPN-h6-QCW" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="10" id="cBY-8l-HZt"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="proteinFractionLabel" destination="ORw-FV-Y7x" id="Deg-s4-205"/>
                         <outlet property="proteinProgressBar" destination="Krb-ET-stT" id="hYw-v5-agA"/>
+                        <segue destination="Te7-bI-ZBH" kind="popoverPresentation" identifier="HomeToNewMeal" popoverAnchorView="8bC-Xf-vdC" id="YhF-qn-BwN">
+                            <popoverArrowDirection key="popoverArrowDirection" up="YES"/>
+                        </segue>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="6.8702290076335872" y="3.5211267605633805"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="vLy-I9-F00">
+            <objects>
+                <viewController id="Te7-bI-ZBH" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oFM-Sz-TMF">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meal Placeholder" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VHo-B4-wJ3">
+                                <rect key="frame" x="71" y="118" width="251" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Icc-wG-q8m"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="VHo-B4-wJ3" firstAttribute="centerX" secondItem="oFM-Sz-TMF" secondAttribute="centerX" id="VM4-j2-7aY"/>
+                            <constraint firstItem="VHo-B4-wJ3" firstAttribute="top" secondItem="Icc-wG-q8m" secondAttribute="top" constant="118" id="eJK-Vu-ax4"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Uc-KZ-9U4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1000" y="9"/>
         </scene>
     </scenes>
     <resources>
