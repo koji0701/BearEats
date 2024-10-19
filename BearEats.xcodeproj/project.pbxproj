@@ -105,6 +105,17 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		E55766FB2CC456420071FFC9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E5C7342D2CC32E88003223AF /* AppDelegate.swift */,
+				E5C7342F2CC32E88003223AF /* SceneDelegate.swift */,
+				E5C734392CC32E89003223AF /* Assets.xcassets */,
+				E5C7343B2CC32E89003223AF /* LaunchScreen.storyboard */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		E5C734212CC32E88003223AF = {
 			isa = PBXGroup;
 			children = (
@@ -128,14 +139,11 @@
 		E5C7342C2CC32E88003223AF /* BearEats */ = {
 			isa = PBXGroup;
 			children = (
+				E55766FB2CC456420071FFC9 /* Supporting Files */,
 				E54E36742CC3664F00D223AD /* Model */,
-				E5C7342D2CC32E88003223AF /* AppDelegate.swift */,
-				E5C7342F2CC32E88003223AF /* SceneDelegate.swift */,
 				E5C734312CC32E88003223AF /* HomePageVC.swift */,
 				E5B7FEBA2CC414CC007C160A /* SettingsVC.swift */,
 				E5C734332CC32E88003223AF /* Main.storyboard */,
-				E5C734392CC32E89003223AF /* Assets.xcassets */,
-				E5C7343B2CC32E89003223AF /* LaunchScreen.storyboard */,
 				E5C7343E2CC32E89003223AF /* Info.plist */,
 				E5C734362CC32E88003223AF /* BearEats.xcdatamodeld */,
 			);

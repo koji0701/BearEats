@@ -367,26 +367,47 @@
                                     <action selector="settingsClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IQq-Te-MOs"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Today's Meals" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aHG-UE-13E" userLabel="Today's meals">
-                                <rect key="frame" x="15" y="468" width="109" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Q8D-4x-WWa">
-                                <rect key="frame" x="20" y="497" width="400" height="376"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <viewLayoutGuide key="contentLayoutGuide" id="lFw-Mc-f5S"/>
-                                <viewLayoutGuide key="frameLayoutGuide" id="SRa-LI-CcO"/>
-                            </scrollView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="UaP-Ov-hsl">
+                                <rect key="frame" x="15" y="497" width="405" height="376"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MealCell" textLabel="Jqd-F2-dIF" detailTextLabel="hxK-LL-J7w" style="IBUITableViewCellStyleValue1" id="MwE-uq-e3J">
+                                        <rect key="frame" x="0.0" y="50" width="405" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="MwE-uq-e3J" id="MpJ-RR-ghf">
+                                            <rect key="frame" x="0.0" y="0.0" width="405" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Jqd-F2-dIF">
+                                                    <rect key="frame" x="20" y="15" width="25" height="14.333333333333334"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hxK-LL-J7w">
+                                                    <rect key="frame" x="352.33333333333331" y="15" width="32.666666666666664" height="14.333333333333334"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="UaP-Ov-hsl" firstAttribute="top" secondItem="GHb-LH-5tr" secondAttribute="bottom" constant="69" id="1r8-0s-rKp"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="v4t-VN-HWg" secondAttribute="trailing" constant="15" id="CHX-Ss-9k3"/>
                             <constraint firstAttribute="trailing" secondItem="GHb-LH-5tr" secondAttribute="trailing" constant="15" id="ENJ-iO-so8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="UaP-Ov-hsl" secondAttribute="trailing" constant="20" id="FzC-Kf-6Ei"/>
+                            <constraint firstItem="UaP-Ov-hsl" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="K7v-Ir-O8L"/>
                             <constraint firstItem="v4t-VN-HWg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="mzp-Hi-50J"/>
+                            <constraint firstItem="UaP-Ov-hsl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="nmY-Xz-Vyz"/>
                             <constraint firstItem="GHb-LH-5tr" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="45" id="pRo-bZ-bsb"/>
                             <constraint firstItem="GHb-LH-5tr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="x8x-0V-PAR"/>
                         </constraints>
@@ -402,7 +423,7 @@
                         <outlet property="fatsProgressBar" destination="Lv1-dM-Rsf" id="JrL-kM-lBv"/>
                         <outlet property="proteinFractionLabel" destination="ORw-FV-Y7x" id="Deg-s4-205"/>
                         <outlet property="proteinProgressBar" destination="Krb-ET-stT" id="hYw-v5-agA"/>
-                        <outlet property="scrollView" destination="Q8D-4x-WWa" id="w1u-oY-V3Z"/>
+                        <outlet property="tableView" destination="UaP-Ov-hsl" id="z91-Xw-bZ2"/>
                         <segue destination="Te7-bI-ZBH" kind="popoverPresentation" identifier="HomeToNewMeal" popoverAnchorView="8bC-Xf-vdC" id="YhF-qn-BwN">
                             <popoverArrowDirection key="popoverArrowDirection" up="YES"/>
                         </segue>
@@ -606,7 +627,7 @@
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="quaternaryLabelColor">
-            <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.1764705882" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.17647058823529413" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

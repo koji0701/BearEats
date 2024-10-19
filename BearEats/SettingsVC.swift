@@ -18,7 +18,6 @@ class SettingsVC: UIViewController {
     
     @IBOutlet weak var fatsTF: UITextField!
     
-    private var settingsEditedFlag = false
     
     let defaults = UserDefaults.standard
     
@@ -53,7 +52,6 @@ class SettingsVC: UIViewController {
         if let val = Double(tf.text!) {
             goal = val
             defaults.set(val, forKey: key)
-            settingsEditedFlag = true
         }
         else {
             tf.text = String(goal)
@@ -61,17 +59,7 @@ class SettingsVC: UIViewController {
     }
     
     
-    override func viewWillDisappear(_ animated: Bool) {
-        print("settings view will disappear")
-        if settingsEditedFlag {
-                    
-            //MARK: BUG, the changes made in settings are not on the home page BECAUSE I'm not able to access the home page VC
-            if let homeVC = navigationController?.tabBarController?.viewControllers?.first(where: { $0 is HomePageVC }) as? HomePageVC {
-                homeVC.refreshProgressBars()
-                print("refreshing progress bars after settings disappear")
-            }
-        }
-    }
+    
 }
 
 extension UIViewController {
