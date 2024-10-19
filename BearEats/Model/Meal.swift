@@ -15,6 +15,7 @@ struct Meal {
     let carbs: Int
     
     let mealName: String
+    let date: Date
     
     init(mealName: String, calories: Int, protein: Int, fats: Int, carbs: Int) {
         self.calories = calories
