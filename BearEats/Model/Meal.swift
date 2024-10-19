@@ -16,17 +16,20 @@ struct Meal {
     
     let mealName: String
     let date: Date
+    let time: String
     
-    
-    init(mealName: String, calories: Double, protein: Double, fats: Double, carbs: Double) {
+    init(mealName: String, calories: Double, protein: Double, fats: Double, carbs: Double, date: Date? = Date()) {
         self.calories = calories
         self.protein = protein
         self.fats = fats
         self.carbs = carbs
         self.mealName = mealName
-        self.date = Date()
+        self.date = date ?? Date()
+        
+        let formatter = DateFormatter()
+        formatter.dateFormat = "h:mm a"
+        self.time = formatter.string(from: self.date)
     }
-    
     func addMeal() {
         CurrentMacros.calories += calories
         CurrentMacros.protein += protein

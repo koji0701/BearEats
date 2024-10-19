@@ -16,10 +16,18 @@ class HomePageVC: UIViewController {
     
     //let meals = [Meal]()
     let meals = [
-        Menu.BD.menu["Harvest Slider"],
+        Menu.beastcraft.menu["Harvest Slider"],
+        Menu.Bergson.menu["Acai Energy"],
+        Menu.Subway.menu["6\" BLT"],
+        Menu.beastcraft.menu["Harvest Slider"],
+        Menu.Bergson.menu["Acai Energy"],
+        Menu.Subway.menu["6\" BLT"],
+        Menu.beastcraft.menu["Harvest Slider"],
         Menu.Bergson.menu["Acai Energy"],
         Menu.Subway.menu["6\" BLT"]
     ]
+    
+    
     
     @IBOutlet weak var proteinProgressBar: GradientHorizontalProgressBar!
     
@@ -82,6 +90,7 @@ class HomePageVC: UIViewController {
         }
     }
     
+    
     func refreshProgressBars() {
         proteinProgressBar.progress = CGFloat(CurrentMacros.protein) / CGFloat(Goals.protein)
         proteinFractionLabel.text = "\(CurrentMacros.protein) / \(Goals.protein)"
@@ -102,25 +111,18 @@ class HomePageVC: UIViewController {
 extension HomePageVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MealCell", for: indexPath)
-        cell.textLabel?.text = "test cell"
+        
+        print(meals[indexPath.row]?.mealName, meals[indexPath.row]?.time)
+        
+        cell.textLabel?.text = meals[indexPath.row]?.mealName
+        cell.detailTextLabel?.text = meals[indexPath.row]?.time
         return cell
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print("numberOFRowsInSection")
-        return 3 //testing
-        //return meals.length
-    }
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int { return meals.count }
     
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        print("today's meals label")
-        return "Today's Meals"
-    }
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
-        print("number of sections")
-        return 1
-    }
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? { return "Today's Meals" }
+    func numberOfSections(in tableView: UITableView) -> Int { return 1 }
 
     
     
