@@ -11,6 +11,8 @@ import CoreData
 class HomePageVC: UIViewController {
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext //context globally for this
     
+    let meals = [Meal]()
+    
     @IBOutlet weak var proteinProgressBar: GradientHorizontalProgressBar!
     
     @IBOutlet weak var proteinFractionLabel: UILabel!
@@ -27,31 +29,21 @@ class HomePageVC: UIViewController {
     
     @IBOutlet weak var fatsProgressBar: GradientHorizontalProgressBar!
     
+    
+    @IBOutlet weak var scrollView: UIScrollView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //proteinProgressBar.progress = CGFloat(CurrentMacros.protein) / CGFloat(Goals.protein)
-        //proteinFractionLabel.text = "\(CurrentMacros.protein) / \(Goals.protein)"
+        refreshProgressBars()
         
-        proteinProgressBar.progress = 0.67
-        proteinFractionLabel.text = "100 / 150"
-        
-        caloriesProgressBar.progress = 0.3
-        caloriesFractionLabel.text = "600 / 2000"
-        
-        carbsProgressBar.progress = 0.5
-        carbsFractionLabel.text = "40 / 80"
-        
-        fatsProgressBar.progress = 0.8
-        fatsFractionLabel.text = "64 / 80"
-        
-        
-        print(Menu.beastcraft.menu["Harvest Slider"])
         
     }
     
-    @IBAction func addMealClicked(_ sender: Any) {
-        performSegue(withIdentifier: "HomeToNewMeal", sender: self)
+    
+    @IBAction func settingsClicked(_ sender: Any) {
+        performSegue(withIdentifier: "HomeToSettings", sender: self)
     }
     
     func saveContext() {
@@ -64,5 +56,20 @@ class HomePageVC: UIViewController {
         }
     }
     
+    func refreshProgressBars() {
+        proteinProgressBar.progress = CGFloat(CurrentMacros.protein) / CGFloat(Goals.protein)
+        proteinFractionLabel.text = "\(CurrentMacros.protein) / \(Goals.protein)"
+        
+        carbsProgressBar.progress = CGFloat(CurrentMacros.carbs) / CGFloat(Goals.carbs)
+        carbsFractionLabel.text = "\(CurrentMacros.carbs) / \(Goals.carbs)"
+        
+        caloriesProgressBar.progress = CGFloat(CurrentMacros.calories) / CGFloat(Goals.calories)
+        caloriesFractionLabel.text = "\(CurrentMacros.calories) / \(Goals.calories)"
+        
+        fatsProgressBar.progress = CGFloat(CurrentMacros.fats) / CGFloat(Goals.fats)
+        fatsFractionLabel.text = "\(CurrentMacros.fats) / \(Goals.fats)"
+    }
+    
 }
+
 
