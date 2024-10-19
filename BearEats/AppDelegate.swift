@@ -12,9 +12,20 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
-
+    let defaults = UserDefaults.standard
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        CurrentMacros.protein = defaults.value(forKey: "currentMacrosProtein") as? Int ?? 0
+        CurrentMacros.carbs = defaults.value(forKey: "currentMacrosCarbs") as? Int ?? 0
+        CurrentMacros.calories = defaults.value(forKey: "currentMacrosCalories") as? Int ?? 0
+        CurrentMacros.fats = defaults.value(forKey: "currentMacrosFats") as? Int ?? 0
+        
+        Goals.calories = defaults.value(forKey: "goalsCalories") as? Int ?? 3000
+        Goals.carbs = defaults.value(forKey: "goalsCarbs") as? Int ?? 280
+        Goals.fats = defaults.value(forKey: "goalsFats") as? Int ?? 80
+        Goals.protein = defaults.value(forKey: "goalsProtein") as? Int ?? 100
+        
         return true
     }
 

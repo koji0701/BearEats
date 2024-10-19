@@ -16,5 +16,4 @@ struct Restaurant {
         self.restaurantName = restaurantName
     }
     
-
 }

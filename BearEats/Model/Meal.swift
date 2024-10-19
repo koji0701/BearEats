@@ -23,4 +23,12 @@ struct Meal {
         self.carbs = carbs
         self.mealName = mealName
     }
+    
+    func addMeal() {
+        CurrentMacros.calories += calories
+        CurrentMacros.protein += protein
+        CurrentMacros.fats += fats
+        CurrentMacros.carbs += carbs
+        
+    }
 }

@@ -12,6 +12,6 @@ struct Goals {
     static var carbs: Int = 280
     static var calories: Int = 3000
     static var fats: Int = 80
+    //userdefaults to store in coredata
     
-    //anything else?
 }
