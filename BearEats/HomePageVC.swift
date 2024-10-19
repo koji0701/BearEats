@@ -15,14 +15,36 @@ class HomePageVC: UIViewController {
     
     @IBOutlet weak var proteinFractionLabel: UILabel!
     
+    @IBOutlet weak var caloriesFractionLabel: UILabel!
+    
+    @IBOutlet weak var caloriesProgressBar: GradientHorizontalProgressBar!
+    
+    @IBOutlet weak var carbsFractionLabel: UILabel!
+    
+    @IBOutlet weak var carbsProgressBar: GradientHorizontalProgressBar!
+    
+    @IBOutlet weak var fatsFractionLabel: UILabel!
+    
+    @IBOutlet weak var fatsProgressBar: GradientHorizontalProgressBar!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         
-        //testing the ui
-        proteinProgressBar.progress = CGFloat(CurrentMacros.protein) / CGFloat(Goals.protein)
-        proteinFractionLabel.text = "\(CurrentMacros.protein) / \(Goals.protein)"
+        //proteinProgressBar.progress = CGFloat(CurrentMacros.protein) / CGFloat(Goals.protein)
+        //proteinFractionLabel.text = "\(CurrentMacros.protein) / \(Goals.protein)"
+        
+        proteinProgressBar.progress = 0.67
+        proteinFractionLabel.text = "100 / 150"
+        
+        caloriesProgressBar.progress = 0.3
+        caloriesFractionLabel.text = "600 / 2000"
+        
+        carbsProgressBar.progress = 0.5
+        carbsFractionLabel.text = "40 / 80"
+        
+        fatsProgressBar.progress = 0.8
+        fatsFractionLabel.text = "64 / 80"
+        
         
         print(Menu.beastcraft.menu["Harvest Slider"])
         

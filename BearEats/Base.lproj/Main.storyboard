@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <device id="retina6_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
@@ -14,21 +14,32 @@
             <objects>
                 <viewController id="BYZ-38-t0r" userLabel="HomePageVC" customClass="HomePageVC" customModule="BearEats" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="440" height="956"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" id="FqN-BJ-vyK" userLabel="HeaderView" customClass="RoundedShadowView" customModule="BearEats" customModuleProvider="target">
-                                <rect key="frame" x="3" y="59" width="390" height="143"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zPN-h6-QCW" userLabel="AddMeal">
+                                <rect key="frame" x="182.66666666666666" y="857" width="74.999999999999972" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="OkD-cn-U2c"/>
+                                    <constraint firstAttribute="width" constant="75" id="bLb-uc-g7B"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Add"/>
+                                <connections>
+                                    <action selector="addMealClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aca-Sl-Nwe"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="29" translatesAutoresizingMaskIntoConstraints="NO" id="GHb-LH-5tr" userLabel="Macros Stack View">
+                                <rect key="frame" x="15" y="122" width="410" height="319"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="10" axis="vertical" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="QHd-oa-lVx" userLabel="Content Stack">
-                                        <rect key="frame" x="15" y="42.666666666666671" width="360" height="58"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="10" axis="vertical" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="QHd-oa-lVx" userLabel="Protein Stack">
+                                        <rect key="frame" x="0.0" y="0.0" width="410" height="58"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="10" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="25P-jj-DGy">
-                                                <rect key="frame" x="0.0" y="0.0" width="360" height="21"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="410" height="21"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Protein" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Osq-5d-XF4" userLabel="Greeting">
-                                                        <rect key="frame" x="0.0" y="0.0" width="309.66666666666669" height="21"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="359.66666666666669" height="21"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="21" id="jxC-hO-jcP"/>
@@ -38,7 +49,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <stackView opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="10" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="0oN-FX-ZNJ">
-                                                        <rect key="frame" x="311.66666666666669" y="0.0" width="48.333333333333314" height="21"/>
+                                                        <rect key="frame" x="361.66666666666669" y="0.0" width="48.333333333333314" height="21"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="253" verticalHuggingPriority="251" text="101🎉" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ORw-FV-Y7x" userLabel="Protein Fraction">
                                                                 <rect key="frame" x="0.0" y="0.0" width="48.333333333333336" height="21"/>
@@ -67,10 +78,10 @@
                                                 </constraints>
                                             </stackView>
                                             <view contentMode="scaleToFill" horizontalCompressionResistancePriority="10" translatesAutoresizingMaskIntoConstraints="NO" id="L3U-yu-1gd">
-                                                <rect key="frame" x="0.0" y="37.999999999999986" width="360" height="20"/>
+                                                <rect key="frame" x="0.0" y="38" width="410" height="20"/>
                                                 <subviews>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Krb-ET-stT" userLabel="CustomProgressBar" customClass="GradientHorizontalProgressBar" customModule="BearEats" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="-2.6666666666666572" width="360" height="25"/>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Krb-ET-stT" userLabel="Protein Progress Bar" customClass="GradientHorizontalProgressBar" customModule="BearEats" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="-2.3333333333333428" width="410" height="25"/>
                                                         <color key="backgroundColor" systemColor="quaternaryLabelColor"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="25" id="fFh-8S-nJm"/>
@@ -89,37 +100,254 @@
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="25P-jj-DGy" firstAttribute="leading" secondItem="QHd-oa-lVx" secondAttribute="leading" id="AdA-jF-xAN"/>
+                                            <constraint firstItem="25P-jj-DGy" firstAttribute="leading" secondItem="QHd-oa-lVx" secondAttribute="leading" id="Iki-3S-17o"/>
+                                            <constraint firstAttribute="trailing" secondItem="25P-jj-DGy" secondAttribute="trailing" id="Tqa-SJ-lC2"/>
                                             <constraint firstAttribute="trailing" secondItem="25P-jj-DGy" secondAttribute="trailing" id="YoE-w2-C8k"/>
+                                            <constraint firstAttribute="height" constant="58" id="bPi-zO-Jfc"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="10" axis="vertical" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="KxT-eM-Wed" userLabel="Calories Stack">
+                                        <rect key="frame" x="0.0" y="87" width="410" height="58"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="10" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="Qah-qG-d9X">
+                                                <rect key="frame" x="0.0" y="0.0" width="410" height="21"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Calories" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m0v-lK-UiX" userLabel="Calories Label">
+                                                        <rect key="frame" x="0.0" y="0.0" width="359.66666666666669" height="21"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="21" id="2NT-uJ-zSx"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="10" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="25q-Xa-NhG">
+                                                        <rect key="frame" x="361.66666666666669" y="0.0" width="48.333333333333314" height="21"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="253" verticalHuggingPriority="251" text="101🎉" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NzR-ub-oi6" userLabel="Calories Fraction">
+                                                                <rect key="frame" x="0.0" y="0.0" width="48.333333333333336" height="21"/>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="21" id="tfx-R3-FN6"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="trailing" secondItem="NzR-ub-oi6" secondAttribute="trailing" id="r5K-gw-5j3"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="25q-Xa-NhG" firstAttribute="centerY" secondItem="Qah-qG-d9X" secondAttribute="centerY" id="Cpl-pM-waQ"/>
+                                                    <constraint firstAttribute="trailing" secondItem="25q-Xa-NhG" secondAttribute="trailing" id="DJL-qZ-Y33"/>
+                                                    <constraint firstItem="m0v-lK-UiX" firstAttribute="centerY" secondItem="Qah-qG-d9X" secondAttribute="centerY" id="Nq9-af-Dzb"/>
+                                                    <constraint firstItem="m0v-lK-UiX" firstAttribute="leading" secondItem="Qah-qG-d9X" secondAttribute="leading" id="i1Q-Ij-wc1"/>
+                                                    <constraint firstItem="25q-Xa-NhG" firstAttribute="leading" secondItem="m0v-lK-UiX" secondAttribute="trailing" constant="8" symbolic="YES" id="mbv-da-UIZ"/>
+                                                </constraints>
+                                            </stackView>
+                                            <view contentMode="scaleToFill" horizontalCompressionResistancePriority="10" translatesAutoresizingMaskIntoConstraints="NO" id="jOB-xk-J0c">
+                                                <rect key="frame" x="0.0" y="38" width="410" height="20"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ULZ-Xk-BF8" userLabel="Calories Progress Bar" customClass="GradientHorizontalProgressBar" customModule="BearEats" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="-2.3333333333333428" width="410" height="25"/>
+                                                        <color key="backgroundColor" systemColor="quaternaryLabelColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="25" id="Cjy-BG-fhj"/>
+                                                        </constraints>
+                                                    </view>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="ULZ-Xk-BF8" firstAttribute="leading" secondItem="jOB-xk-J0c" secondAttribute="leading" id="Dah-d1-wRD"/>
+                                                    <constraint firstItem="ULZ-Xk-BF8" firstAttribute="centerY" secondItem="jOB-xk-J0c" secondAttribute="centerY" id="R7A-Ks-agt"/>
+                                                    <constraint firstAttribute="height" constant="20" id="RsK-Hx-wg2"/>
+                                                    <constraint firstAttribute="trailing" secondItem="ULZ-Xk-BF8" secondAttribute="trailing" id="jof-b4-ROf"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="Qah-qG-d9X" secondAttribute="trailing" id="Iox-oD-PKy"/>
+                                            <constraint firstItem="Qah-qG-d9X" firstAttribute="leading" secondItem="KxT-eM-Wed" secondAttribute="leading" id="V6q-Ea-pnl"/>
+                                            <constraint firstItem="Qah-qG-d9X" firstAttribute="leading" secondItem="KxT-eM-Wed" secondAttribute="leading" id="fGV-1T-Y5R"/>
+                                            <constraint firstAttribute="height" constant="58" id="hrm-Cq-h8t"/>
+                                            <constraint firstAttribute="trailing" secondItem="Qah-qG-d9X" secondAttribute="trailing" id="kVq-e7-rSR"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="10" axis="vertical" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="cZv-ky-HKC" userLabel="Carbs Stack">
+                                        <rect key="frame" x="0.0" y="174" width="410" height="58"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="10" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="TcF-0s-xmA">
+                                                <rect key="frame" x="0.0" y="0.0" width="410" height="21"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Carbs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KmU-xZ-gg9" userLabel="Carbs Label">
+                                                        <rect key="frame" x="0.0" y="0.0" width="359.66666666666669" height="21"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="21" id="shQ-ci-8RY"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="10" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="C1c-8l-EqV">
+                                                        <rect key="frame" x="361.66666666666669" y="0.0" width="48.333333333333314" height="21"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="253" verticalHuggingPriority="251" text="101🎉" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="91G-hN-kXP" userLabel="Carbs Fraction">
+                                                                <rect key="frame" x="0.0" y="0.0" width="48.333333333333336" height="21"/>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="21" id="EYx-n4-2zx"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="trailing" secondItem="91G-hN-kXP" secondAttribute="trailing" id="can-Zt-6WW"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="KmU-xZ-gg9" firstAttribute="leading" secondItem="TcF-0s-xmA" secondAttribute="leading" id="6AV-pe-QYb"/>
+                                                    <constraint firstAttribute="trailing" secondItem="C1c-8l-EqV" secondAttribute="trailing" id="9av-DJ-LhF"/>
+                                                    <constraint firstItem="KmU-xZ-gg9" firstAttribute="centerY" secondItem="TcF-0s-xmA" secondAttribute="centerY" id="RVC-Rx-HPY"/>
+                                                    <constraint firstItem="C1c-8l-EqV" firstAttribute="centerY" secondItem="TcF-0s-xmA" secondAttribute="centerY" id="Xma-cg-vZv"/>
+                                                    <constraint firstItem="C1c-8l-EqV" firstAttribute="leading" secondItem="KmU-xZ-gg9" secondAttribute="trailing" constant="8" symbolic="YES" id="ZLo-wL-Nc7"/>
+                                                </constraints>
+                                            </stackView>
+                                            <view contentMode="scaleToFill" horizontalCompressionResistancePriority="10" translatesAutoresizingMaskIntoConstraints="NO" id="Cgv-zd-UfT">
+                                                <rect key="frame" x="0.0" y="38" width="410" height="20"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Th6-Mu-JrR" userLabel="Carbs Progress Bar" customClass="GradientHorizontalProgressBar" customModule="BearEats" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="-2.3333333333333144" width="410" height="25"/>
+                                                        <color key="backgroundColor" systemColor="quaternaryLabelColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="25" id="8bb-we-2TB"/>
+                                                        </constraints>
+                                                    </view>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="20" id="Ovc-hI-0WX"/>
+                                                    <constraint firstItem="Th6-Mu-JrR" firstAttribute="leading" secondItem="Cgv-zd-UfT" secondAttribute="leading" id="Vb5-wm-odq"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Th6-Mu-JrR" secondAttribute="trailing" id="o5X-id-2TH"/>
+                                                    <constraint firstItem="Th6-Mu-JrR" firstAttribute="centerY" secondItem="Cgv-zd-UfT" secondAttribute="centerY" id="vpP-jH-b1i"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="TcF-0s-xmA" firstAttribute="leading" secondItem="cZv-ky-HKC" secondAttribute="leading" id="1yO-Y4-x5m"/>
+                                            <constraint firstAttribute="trailing" secondItem="TcF-0s-xmA" secondAttribute="trailing" id="DUf-vL-bdN"/>
+                                            <constraint firstItem="TcF-0s-xmA" firstAttribute="leading" secondItem="cZv-ky-HKC" secondAttribute="leading" id="MzN-oa-Z8u"/>
+                                            <constraint firstAttribute="trailing" secondItem="TcF-0s-xmA" secondAttribute="trailing" id="aSE-H0-GOJ"/>
+                                            <constraint firstAttribute="height" constant="58" id="qYz-kj-kiP"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="10" axis="vertical" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="6pa-Yw-rB9" userLabel="Fats Stack">
+                                        <rect key="frame" x="0.0" y="261" width="410" height="58"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="10" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="Wcd-cP-0kM">
+                                                <rect key="frame" x="0.0" y="0.0" width="410" height="21"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Fats" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N1j-eK-0WC" userLabel="Fats Label">
+                                                        <rect key="frame" x="0.0" y="0.0" width="359.66666666666669" height="21"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="21" id="Ofd-fF-XPW"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="10" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="hPJ-sQ-Gz1">
+                                                        <rect key="frame" x="361.66666666666669" y="0.0" width="48.333333333333314" height="21"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="253" verticalHuggingPriority="251" text="101🎉" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tfd-DM-b8d" userLabel="Fats Fraction">
+                                                                <rect key="frame" x="0.0" y="0.0" width="48.333333333333336" height="21"/>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="21" id="8Hb-za-Ao4"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="trailing" secondItem="Tfd-DM-b8d" secondAttribute="trailing" id="Aoa-cC-JVx"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="hPJ-sQ-Gz1" secondAttribute="trailing" id="Bd2-qd-2Uj"/>
+                                                    <constraint firstItem="N1j-eK-0WC" firstAttribute="leading" secondItem="Wcd-cP-0kM" secondAttribute="leading" id="JTM-sB-bAU"/>
+                                                    <constraint firstItem="hPJ-sQ-Gz1" firstAttribute="centerY" secondItem="Wcd-cP-0kM" secondAttribute="centerY" id="KdW-U9-aJd"/>
+                                                    <constraint firstItem="N1j-eK-0WC" firstAttribute="centerY" secondItem="Wcd-cP-0kM" secondAttribute="centerY" id="X3D-8L-H1A"/>
+                                                    <constraint firstItem="hPJ-sQ-Gz1" firstAttribute="leading" secondItem="N1j-eK-0WC" secondAttribute="trailing" constant="8" symbolic="YES" id="vgx-e1-4qc"/>
+                                                </constraints>
+                                            </stackView>
+                                            <view contentMode="scaleToFill" horizontalCompressionResistancePriority="10" translatesAutoresizingMaskIntoConstraints="NO" id="Pho-jw-vU4">
+                                                <rect key="frame" x="0.0" y="38" width="410" height="20"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lv1-dM-Rsf" userLabel="Fats Progress Bar" customClass="GradientHorizontalProgressBar" customModule="BearEats" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="-2.3333333333333144" width="410" height="25"/>
+                                                        <color key="backgroundColor" systemColor="quaternaryLabelColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="25" id="19y-Pl-Z65"/>
+                                                        </constraints>
+                                                    </view>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="Lv1-dM-Rsf" firstAttribute="centerY" secondItem="Pho-jw-vU4" secondAttribute="centerY" id="4ZD-UZ-ogC"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Lv1-dM-Rsf" secondAttribute="trailing" id="7le-m9-4G8"/>
+                                                    <constraint firstItem="Lv1-dM-Rsf" firstAttribute="leading" secondItem="Pho-jw-vU4" secondAttribute="leading" id="GmQ-gd-P3j"/>
+                                                    <constraint firstAttribute="height" constant="20" id="WL7-sz-fQy"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="58" id="DPS-cX-51d"/>
+                                            <constraint firstAttribute="trailing" secondItem="Wcd-cP-0kM" secondAttribute="trailing" id="GQu-0a-Wcw"/>
+                                            <constraint firstAttribute="trailing" secondItem="Wcd-cP-0kM" secondAttribute="trailing" id="UsE-uW-y2P"/>
+                                            <constraint firstItem="Wcd-cP-0kM" firstAttribute="leading" secondItem="6pa-Yw-rB9" secondAttribute="leading" id="fHx-GL-Bj0"/>
+                                            <constraint firstItem="Wcd-cP-0kM" firstAttribute="leading" secondItem="6pa-Yw-rB9" secondAttribute="leading" id="fXb-cy-6Ak"/>
                                         </constraints>
                                     </stackView>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstItem="QHd-oa-lVx" firstAttribute="centerY" secondItem="FqN-BJ-vyK" secondAttribute="centerY" id="0xE-Cs-D34"/>
-                                    <constraint firstAttribute="trailing" secondItem="QHd-oa-lVx" secondAttribute="trailing" constant="15" id="KQQ-L5-koK"/>
-                                    <constraint firstItem="QHd-oa-lVx" firstAttribute="leading" secondItem="FqN-BJ-vyK" secondAttribute="leading" constant="15" id="ZJe-AS-9h7"/>
-                                </constraints>
-                            </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zPN-h6-QCW" userLabel="AddMeal">
-                                <rect key="frame" x="159" y="753" width="75" height="75"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="75" id="OkD-cn-U2c"/>
-                                    <constraint firstAttribute="width" constant="75" id="bLb-uc-g7B"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Add"/>
-                                <connections>
-                                    <action selector="addMealClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aca-Sl-Nwe"/>
-                                </connections>
-                            </button>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="zPN-h6-QCW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0fv-aj-dZS"/>
+                            <constraint firstAttribute="trailing" secondItem="GHb-LH-5tr" secondAttribute="trailing" constant="15" id="ENJ-iO-so8"/>
                             <constraint firstItem="zPN-h6-QCW" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="10" id="cBY-8l-HZt"/>
+                            <constraint firstItem="GHb-LH-5tr" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="pRo-bZ-bsb"/>
+                            <constraint firstItem="GHb-LH-5tr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="x8x-0V-PAR"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="caloriesFractionLabel" destination="NzR-ub-oi6" id="aEE-bA-75o"/>
+                        <outlet property="caloriesProgressBar" destination="ULZ-Xk-BF8" id="At0-nu-Vv2"/>
+                        <outlet property="carbsFractionLabel" destination="91G-hN-kXP" id="EL0-C0-t0U"/>
+                        <outlet property="carbsProgressBar" destination="Th6-Mu-JrR" id="K11-qy-WWV"/>
+                        <outlet property="fatsFractionLabel" destination="Tfd-DM-b8d" id="8Rj-Et-pOt"/>
+                        <outlet property="fatsProgressBar" destination="Lv1-dM-Rsf" id="JrL-kM-lBv"/>
                         <outlet property="proteinFractionLabel" destination="ORw-FV-Y7x" id="Deg-s4-205"/>
                         <outlet property="proteinProgressBar" destination="Krb-ET-stT" id="hYw-v5-agA"/>
                         <segue destination="Te7-bI-ZBH" kind="popoverPresentation" identifier="HomeToNewMeal" popoverAnchorView="8bC-Xf-vdC" id="YhF-qn-BwN">
@@ -136,11 +364,11 @@
             <objects>
                 <viewController id="Te7-bI-ZBH" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oFM-Sz-TMF">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="440" height="946"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meal Placeholder" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VHo-B4-wJ3">
-                                <rect key="frame" x="71" y="118" width="251" height="41"/>
+                                <rect key="frame" x="94.666666666666686" y="118" width="251" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="34"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>

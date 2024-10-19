@@ -8,10 +8,10 @@
 import Foundation
 
 struct CurrentMacros {
-    static var protein: Int = 60
-    static var carbs: Int = 0
-    static var calories: Int = 0
-    static var fats: Int = 0
+    static var protein: Double = 60
+    static var carbs: Double = 0
+    static var calories: Double = 0
+    static var fats: Double = 0
     
     //anything else?
 }

@@ -9,20 +9,22 @@ import Foundation
 
 // is a data structure to store nutritional information about each meal
 struct Meal {
-    let calories: Int
-    let protein: Int
-    let fats: Int
-    let carbs: Int
+    let calories: Double
+    let protein: Double
+    let fats: Double
+    let carbs: Double
     
     let mealName: String
     let date: Date
     
-    init(mealName: String, calories: Int, protein: Int, fats: Int, carbs: Int) {
+    
+    init(mealName: String, calories: Double, protein: Double, fats: Double, carbs: Double) {
         self.calories = calories
         self.protein = protein
         self.fats = fats
         self.carbs = carbs
         self.mealName = mealName
+        self.date = Date()
     }
     
     func addMeal() {

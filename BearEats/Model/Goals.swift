@@ -8,10 +8,10 @@
 import Foundation
 
 struct Goals {
-    static var protein: Int = 100
-    static var carbs: Int = 280
-    static var calories: Int = 3000
-    static var fats: Int = 80
-    //userdefaults to store in coredata
+    static var protein: Double = 100
+    static var carbs: Double = 280
+    static var calories: Double = 3000
+    static var fats: Double = 80
+    
     
 }
