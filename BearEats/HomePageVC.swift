@@ -19,7 +19,7 @@ class HomePageVC: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        //testing
+        //testing the ui
         proteinProgressBar.progress = CGFloat(CurrentMacros.protein) / CGFloat(Goals.protein)
         proteinFractionLabel.text = "\(CurrentMacros.protein) / \(Goals.protein)"
     }
