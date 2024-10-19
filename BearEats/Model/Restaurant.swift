@@ -8,7 +8,7 @@
 import Foundation
 
 struct Restaurant {
-    let menu: [String: Meal] //mealName : Meal
+    let menu: [String: Meal] 
     let restaurantName: String
     
     init (restaurantName: String, menu: [String: Meal]) {

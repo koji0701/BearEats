@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-
+//progress bar fancier
 class GradientHorizontalProgressBar: UIView {
     var color: UIColor = .systemPink {
         didSet { setNeedsDisplay() }

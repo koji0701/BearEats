@@ -7,7 +7,7 @@
 
 import Foundation
 
-//this is a data structure to store nutritional information about each meal
+// is a data structure to store nutritional information about each meal
 struct Meal {
     let calories: Int
     let protein: Int

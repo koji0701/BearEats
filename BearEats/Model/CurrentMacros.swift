@@ -12,4 +12,6 @@ struct CurrentMacros {
     static var carbs: Int = 0
     static var calories: Int = 0
     static var fats: Int = 0
+    
+    //anything else?
 }
