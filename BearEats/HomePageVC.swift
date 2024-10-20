@@ -15,7 +15,7 @@ class HomePageVC: UIViewController {
     var shouldUpdateProgress = false
     
     //let meals = [Meal]()
-    let meals = [
+    var meals = [
         Menu.beastcraft.menu["Harvest Slider"],
         Menu.Bergson.menu["Acai Energy"],
         Menu.Subway.menu["6\" BLT"],
@@ -59,7 +59,6 @@ class HomePageVC: UIViewController {
         
         tableView.reloadData()
         
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -90,6 +89,9 @@ class HomePageVC: UIViewController {
         }
     }
     
+    func fetchContext() {
+        
+    }
     
     func refreshProgressBars() {
         proteinProgressBar.progress = CGFloat(CurrentMacros.protein) / CGFloat(Goals.protein)
@@ -111,9 +113,7 @@ class HomePageVC: UIViewController {
 extension HomePageVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MealCell", for: indexPath)
-        
-        print(meals[indexPath.row]?.mealName, meals[indexPath.row]?.time)
-        
+                
         cell.textLabel?.text = meals[indexPath.row]?.mealName
         cell.detailTextLabel?.text = meals[indexPath.row]?.time
         return cell

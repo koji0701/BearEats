@@ -570,36 +570,185 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s7s-SW-CzV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-667" y="-104"/>
+            <point key="canvasLocation" x="-2075" y="-456"/>
         </scene>
         <!--Item-->
         <scene sceneID="vLy-I9-F00">
             <objects>
-                <viewController id="Te7-bI-ZBH" sceneMemberID="viewController">
+                <viewController id="Te7-bI-ZBH" customClass="PickRestaurantVC" customModule="BearEats" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oFM-Sz-TMF">
                         <rect key="frame" x="0.0" y="0.0" width="440" height="946"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meal Placeholder" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VHo-B4-wJ3">
-                                <rect key="frame" x="94.666666666666686" y="118" width="251" height="41"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add a Meal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V33-yh-rQw" userLabel="Add a Meal">
+                                <rect key="frame" x="138.33333333333337" y="0.0" width="163.66666666666663" height="40.666666666666664"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="34"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="33" translatesAutoresizingMaskIntoConstraints="NO" id="1SI-yc-aSV">
+                                <rect key="frame" x="23" y="50.666666666666686" width="394" height="553.33333333333326"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="54" translatesAutoresizingMaskIntoConstraints="NO" id="5Mm-Lf-vkM">
+                                        <rect key="frame" x="0.0" y="0.0" width="394" height="140"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K5v-Iw-kWV" userLabel="Bear's Den">
+                                                <rect key="frame" x="0.0" y="0.0" width="170" height="140"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="170" id="EHy-jI-xTY"/>
+                                                    <constraint firstAttribute="height" constant="140" id="slh-bT-V6R"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Bear's Den"/>
+                                                <connections>
+                                                    <action selector="bdClicked:" destination="Te7-bI-ZBH" eventType="touchUpInside" id="rX0-m5-UPe"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IjY-at-Nbr">
+                                                <rect key="frame" x="224" y="0.0" width="170" height="140"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="170" id="LGg-8R-ird"/>
+                                                    <constraint firstAttribute="height" constant="140" id="ZXx-v3-mkX"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="DUC"/>
+                                                <connections>
+                                                    <action selector="ducClicked:" destination="Te7-bI-ZBH" eventType="touchUpInside" id="Him-bj-fsx"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="54" translatesAutoresizingMaskIntoConstraints="NO" id="RHa-0N-ZLq">
+                                        <rect key="frame" x="0.0" y="173" width="394" height="140"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UpM-Az-8Vq" userLabel="Bear's Den">
+                                                <rect key="frame" x="0.0" y="0.0" width="170" height="140"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="170" id="6de-eJ-UVz"/>
+                                                    <constraint firstAttribute="height" constant="140" id="l08-3P-FaC"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Cafe Bergson"/>
+                                                <connections>
+                                                    <action selector="bergsonClicked:" destination="Te7-bI-ZBH" eventType="touchUpInside" id="3d4-Uc-CbF"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Msz-aV-BQV">
+                                                <rect key="frame" x="224" y="0.0" width="170" height="140"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="140" id="WfX-rJ-Gb2"/>
+                                                    <constraint firstAttribute="width" constant="170" id="meM-wK-gAZ"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Subway"/>
+                                                <connections>
+                                                    <action selector="subwayClicked:" destination="Te7-bI-ZBH" eventType="touchUpInside" id="Mgp-eK-x7G"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="54" translatesAutoresizingMaskIntoConstraints="NO" id="SrQ-2T-FFM">
+                                        <rect key="frame" x="0.0" y="346" width="394" height="140"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wY5-Xg-NMR" userLabel="Bear's Den">
+                                                <rect key="frame" x="0.0" y="0.0" width="170" height="140"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="140" id="P7o-ye-acs"/>
+                                                    <constraint firstAttribute="width" constant="170" id="yY0-O0-D4R"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Beastcraft BBQ"/>
+                                                <connections>
+                                                    <action selector="beastcraftClicked:" destination="Te7-bI-ZBH" eventType="touchUpInside" id="hpm-ls-DqL"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C6F-5A-F8y">
+                                                <rect key="frame" x="224" y="0.0" width="170" height="140"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="140" id="R1e-zj-KOe"/>
+                                                    <constraint firstAttribute="width" constant="170" id="mmH-30-yfc"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Beverages"/>
+                                                <connections>
+                                                    <action selector="beveragesClicked:" destination="Te7-bI-ZBH" eventType="touchUpInside" id="fV4-0x-7mW"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QNp-b2-GXj">
+                                        <rect key="frame" x="0.0" y="519" width="394" height="34.333333333333371"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Suggest a Meal (with AI!)"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Icc-wG-q8m"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="VHo-B4-wJ3" firstAttribute="centerX" secondItem="oFM-Sz-TMF" secondAttribute="centerX" id="VM4-j2-7aY"/>
-                            <constraint firstItem="VHo-B4-wJ3" firstAttribute="top" secondItem="Icc-wG-q8m" secondAttribute="top" constant="118" id="eJK-Vu-ax4"/>
+                            <constraint firstItem="1SI-yc-aSV" firstAttribute="centerX" secondItem="oFM-Sz-TMF" secondAttribute="centerX" id="0uh-Zv-izi"/>
+                            <constraint firstItem="V33-yh-rQw" firstAttribute="top" secondItem="Icc-wG-q8m" secondAttribute="top" id="Had-Ex-cur"/>
+                            <constraint firstItem="V33-yh-rQw" firstAttribute="centerX" secondItem="oFM-Sz-TMF" secondAttribute="centerX" id="Nk3-zA-6zS"/>
+                            <constraint firstItem="1SI-yc-aSV" firstAttribute="top" secondItem="V33-yh-rQw" secondAttribute="bottom" constant="10" id="WIe-5k-fWt"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="dRL-Kd-W7s"/>
                     <navigationItem key="navigationItem" id="xsn-wA-Iy4"/>
+                    <connections>
+                        <segue destination="A8K-v8-UCI" kind="show" identifier="pickRestaurantToAddMeal" id="znc-C0-lCU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Uc-KZ-9U4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-314" y="-862"/>
+            <point key="canvasLocation" x="-113" y="-862"/>
+        </scene>
+        <!--Add MealVC-->
+        <scene sceneID="ujv-sD-KEf">
+            <objects>
+                <viewController id="A8K-v8-UCI" customClass="AddMealVC" customModule="BearEats" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="g2X-Ur-Lw6">
+                        <rect key="frame" x="0.0" y="0.0" width="440" height="946"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Menu Item" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1eh-AY-jAY">
+                                <rect key="frame" x="151.66666666666666" y="0.0" width="136.99999999999997" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gey-AJ-43a">
+                                <rect key="frame" x="0.0" y="56" width="440" height="216"/>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Te-y7-NpW">
+                                <rect key="frame" x="172" y="891" width="96" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Add Meal"/>
+                                <connections>
+                                    <action selector="addMealClicked:" destination="A8K-v8-UCI" eventType="touchUpInside" id="Dxq-Sm-wBg"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="fsw-15-lkZ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="1eh-AY-jAY" firstAttribute="top" secondItem="fsw-15-lkZ" secondAttribute="top" id="2nI-m7-kEX"/>
+                            <constraint firstItem="1eh-AY-jAY" firstAttribute="centerX" secondItem="g2X-Ur-Lw6" secondAttribute="centerX" id="AnM-n0-Vlc"/>
+                            <constraint firstItem="Gey-AJ-43a" firstAttribute="trailing" secondItem="fsw-15-lkZ" secondAttribute="trailing" id="ELi-OR-Re9"/>
+                            <constraint firstItem="9Te-y7-NpW" firstAttribute="centerX" secondItem="g2X-Ur-Lw6" secondAttribute="centerX" id="NJ1-TS-nKH"/>
+                            <constraint firstItem="Gey-AJ-43a" firstAttribute="leading" secondItem="fsw-15-lkZ" secondAttribute="leading" id="SHu-ZR-CVR"/>
+                            <constraint firstItem="Gey-AJ-43a" firstAttribute="top" secondItem="1eh-AY-jAY" secondAttribute="bottom" constant="20" id="e3t-MP-3bb"/>
+                            <constraint firstItem="fsw-15-lkZ" firstAttribute="bottom" secondItem="9Te-y7-NpW" secondAttribute="bottom" constant="20" id="xmg-Pa-ItN"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="B3M-WP-UCW"/>
+                    <connections>
+                        <outlet property="mealPicker" destination="Gey-AJ-43a" id="NNx-Cu-1gb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NX1-9H-8s4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-138" y="-113"/>
         </scene>
         <!--Item-->
         <scene sceneID="qep-p2-5pi">
@@ -615,7 +764,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rsa-wj-ntF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="588" y="-862"/>
+            <point key="canvasLocation" x="1088" y="-886"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
@@ -627,7 +776,7 @@
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="quaternaryLabelColor">
-            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.17647058823529413" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.1764705882" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

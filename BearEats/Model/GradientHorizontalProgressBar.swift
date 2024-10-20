@@ -110,7 +110,6 @@ class GradientHorizontalProgressBar: UIView {
         pulse.damping = 0.5
         
         if (gradientLayer.animation(forKey: "flowAnimation") != nil) {
-            print("currently having the flow animation")
             resetAnimation()
             CATransaction.setCompletionBlock({
                 self.createRepeatingAnimation()

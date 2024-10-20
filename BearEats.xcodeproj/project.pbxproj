@@ -24,6 +24,10 @@
 		E5C734482CC32E8A003223AF /* BearEatsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C734472CC32E8A003223AF /* BearEatsTests.swift */; };
 		E5C734522CC32E8A003223AF /* BearEatsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C734512CC32E8A003223AF /* BearEatsUITests.swift */; };
 		E5C734542CC32E8A003223AF /* BearEatsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C734532CC32E8A003223AF /* BearEatsUITestsLaunchTests.swift */; };
+		E5F0A55F2CC49AF1007F36E1 /* AddMealVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F0A55E2CC49AF1007F36E1 /* AddMealVC.swift */; };
+		E5F0A5612CC49BB7007F36E1 /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F0A5602CC49BB1007F36E1 /* APICaller.swift */; };
+		E5F0A5642CC49BF1007F36E1 /* OpenAISwift in Frameworks */ = {isa = PBXBuildFile; productRef = E5F0A5632CC49BF1007F36E1 /* OpenAISwift */; };
+		E5FD94BC2CC48AD20096F5FD /* PickRestaurantVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5FD94BB2CC48AD20096F5FD /* PickRestaurantVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +69,9 @@
 		E5C7344D2CC32E8A003223AF /* BearEatsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BearEatsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5C734512CC32E8A003223AF /* BearEatsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BearEatsUITests.swift; sourceTree = "<group>"; };
 		E5C734532CC32E8A003223AF /* BearEatsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BearEatsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		E5F0A55E2CC49AF1007F36E1 /* AddMealVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMealVC.swift; sourceTree = "<group>"; };
+		E5F0A5602CC49BB1007F36E1 /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
+		E5FD94BB2CC48AD20096F5FD /* PickRestaurantVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickRestaurantVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5F0A5642CC49BF1007F36E1 /* OpenAISwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,6 +103,7 @@
 		E54E36742CC3664F00D223AD /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				E5F0A5602CC49BB1007F36E1 /* APICaller.swift */,
 				E54E36772CC368EC00D223AD /* Menu.swift */,
 				E503F6462CC35BEF0023B441 /* Meal.swift */,
 				E54E36722CC3663000D223AD /* Restaurant.swift */,
@@ -143,6 +152,8 @@
 				E54E36742CC3664F00D223AD /* Model */,
 				E5C734312CC32E88003223AF /* HomePageVC.swift */,
 				E5B7FEBA2CC414CC007C160A /* SettingsVC.swift */,
+				E5FD94BB2CC48AD20096F5FD /* PickRestaurantVC.swift */,
+				E5F0A55E2CC49AF1007F36E1 /* AddMealVC.swift */,
 				E5C734332CC32E88003223AF /* Main.storyboard */,
 				E5C7343E2CC32E89003223AF /* Info.plist */,
 				E5C734362CC32E88003223AF /* BearEats.xcdatamodeld */,
@@ -255,6 +266,9 @@
 				Base,
 			);
 			mainGroup = E5C734212CC32E88003223AF;
+			packageReferences = (
+				E5F0A5622CC49BF1007F36E1 /* XCRemoteSwiftPackageReference "OpenAISwift" */,
+			);
 			productRefGroup = E5C7342B2CC32E88003223AF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -298,12 +312,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5F0A55F2CC49AF1007F36E1 /* AddMealVC.swift in Sources */,
 				E5B7FEBB2CC414D0007C160A /* SettingsVC.swift in Sources */,
 				E54E367A2CC373DD00D223AD /* Goals.swift in Sources */,
+				E5F0A5612CC49BB7007F36E1 /* APICaller.swift in Sources */,
 				E5C734382CC32E88003223AF /* BearEats.xcdatamodeld in Sources */,
 				E5C734322CC32E88003223AF /* HomePageVC.swift in Sources */,
 				E589C0622CC33B5500B33B03 /* GradientHorizontalProgressBar.swift in Sources */,
 				E54E36732CC3663000D223AD /* Restaurant.swift in Sources */,
+				E5FD94BC2CC48AD20096F5FD /* PickRestaurantVC.swift in Sources */,
 				E5C7342E2CC32E88003223AF /* AppDelegate.swift in Sources */,
 				E54E367C2CC373F000D223AD /* CurrentMacros.swift in Sources */,
 				E54E36782CC368F400D223AD /* Menu.swift in Sources */,
@@ -650,6 +667,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E5F0A5622CC49BF1007F36E1 /* XCRemoteSwiftPackageReference "OpenAISwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/adamrushy/OpenAISwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.4.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E5F0A5632CC49BF1007F36E1 /* OpenAISwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E5F0A5622CC49BF1007F36E1 /* XCRemoteSwiftPackageReference "OpenAISwift" */;
+			productName = OpenAISwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		E5C734362CC32E88003223AF /* BearEats.xcdatamodeld */ = {

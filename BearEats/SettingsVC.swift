@@ -33,7 +33,6 @@ class SettingsVC: UIViewController {
     
     @IBAction func caloriesEditingEnd(_ sender: Any) {
         editingDidEnd(tf: caloriesTF, goal: &Goals.calories, key: "goalsCalories")
-        print("new calories goal: \(Goals.calories)")
     }
     
     @IBAction func proteinEditingEnd(_ sender: Any) {
