@@ -6,8 +6,10 @@
 //
 
 import Foundation
+//import SwiftData
 
-// is a data structure to store nutritional information about each meal
+
+//@Model
 struct Meal {
     let calories: Double
     let protein: Double
@@ -30,11 +32,5 @@ struct Meal {
         formatter.dateFormat = "h:mm a"
         self.time = formatter.string(from: self.date)
     }
-    func addMeal() {
-        CurrentMacros.calories += calories
-        CurrentMacros.protein += protein
-        CurrentMacros.fats += fats
-        CurrentMacros.carbs += carbs
-        
-    }
+    
 }

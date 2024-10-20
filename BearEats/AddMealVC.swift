@@ -14,6 +14,7 @@ class AddMealVC: UIViewController {
     
     var mealsList = [String: Meal]()
     var mealNames = [String]()
+    var pickedMeal: Meal? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,9 +29,10 @@ class AddMealVC: UIViewController {
     }
     
     @IBAction func addMealClicked(_ sender: Any) {
-        if let homeVC = tabBarController?.viewControllers![0].children[0] as? HomePageVC {
+        
+        if let homeVC = navigationController?.viewControllers[0].children[0] as? HomePageVC{
             
-            print("found homeVC")
+            homeVC.addMeal(addedMeal: pickedMeal!)
         }
         
         navigationController?.popViewController(animated: true)
@@ -63,7 +65,7 @@ extension AddMealVC: UIPickerViewDelegate, UIPickerViewDataSource {
             // You can use the selected meal name to get the corresponding Meal object from mealsList if needed
             if let selectedMeal = mealsList[selectedMealName] {
                 // Do something with the selected Meal object
-                //print("Selected meal details: \(selectedMeal)")
+                pickedMeal = selectedMeal
             }
         }
 }

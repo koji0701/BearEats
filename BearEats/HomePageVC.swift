@@ -14,8 +14,8 @@ class HomePageVC: UIViewController {
     
     var shouldUpdateProgress = false
     
-    //let meals = [Meal]()
-    var meals = [
+    var meals = [Meal]()
+    /*var meals = [
         Menu.beastcraft.menu["Harvest Slider"],
         Menu.Bergson.menu["Acai Energy"],
         Menu.Subway.menu["6\" BLT"],
@@ -25,7 +25,7 @@ class HomePageVC: UIViewController {
         Menu.beastcraft.menu["Harvest Slider"],
         Menu.Bergson.menu["Acai Energy"],
         Menu.Subway.menu["6\" BLT"]
-    ]
+    ]*/
     
     
     
@@ -58,7 +58,9 @@ class HomePageVC: UIViewController {
         tableView.insertRows(at: [IndexPath(row: 0, section: 0)], with: .fade)
         
         tableView.reloadData()
-        
+        print("controllers")
+        print(tabBarController?.viewControllers)
+        print(tabBarController?.viewControllers![0] as? HomePageVC)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -107,6 +109,19 @@ class HomePageVC: UIViewController {
         fatsFractionLabel.text = "\(CurrentMacros.fats) / \(Goals.fats)"
     }
     
+    func addMeal(addedMeal: Meal) {
+        CurrentMacros.calories += addedMeal.calories
+        CurrentMacros.protein += addedMeal.protein
+        CurrentMacros.fats += addedMeal.fats
+        CurrentMacros.carbs += addedMeal.carbs
+        
+        meals.append(addedMeal)
+        //MARK: add meal to context
+        
+        tableView.reloadData()
+        refreshProgressBars()
+        
+    }
 }
 
 
@@ -114,14 +129,20 @@ extension HomePageVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MealCell", for: indexPath)
                 
-        cell.textLabel?.text = meals[indexPath.row]?.mealName
-        cell.detailTextLabel?.text = meals[indexPath.row]?.time
+        cell.textLabel?.text = meals[indexPath.row].mealName
+        cell.detailTextLabel?.text = meals[indexPath.row].time
         return cell
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int { return meals.count }
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return meals.count }
     
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? { return "Today's Meals" }
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        if meals.count == 0 {
+            return "No meals yet today :("
+        }
+        return "Today's Meals"
+    }
     func numberOfSections(in tableView: UITableView) -> Int { return 1 }
 
     

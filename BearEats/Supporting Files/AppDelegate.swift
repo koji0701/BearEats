@@ -16,10 +16,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        CurrentMacros.protein = defaults.value(forKey: "currentMacrosProtein") as? Double ?? 40
-        CurrentMacros.carbs = defaults.value(forKey: "currentMacrosCarbs") as? Double ?? 30
-        CurrentMacros.calories = defaults.value(forKey: "currentMacrosCalories") as? Double ?? 800
-        CurrentMacros.fats = defaults.value(forKey: "currentMacrosFats") as? Double ?? 20
+        CurrentMacros.protein = defaults.value(forKey: "currentMacrosProtein") as? Double ?? 0
+        CurrentMacros.carbs = defaults.value(forKey: "currentMacrosCarbs") as? Double ?? 0
+        CurrentMacros.calories = defaults.value(forKey: "currentMacrosCalories") as? Double ?? 0
+        CurrentMacros.fats = defaults.value(forKey: "currentMacrosFats") as? Double ?? 0
         
         Goals.calories = defaults.value(forKey: "goalsCalories") as? Double ?? 3000
         Goals.carbs = defaults.value(forKey: "goalsCarbs") as? Double ?? 280
