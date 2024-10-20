@@ -20,18 +20,7 @@ class PickRestaurantVC: UIViewController {
     
     @IBOutlet weak var suggestMealButton: UIButton!
     @IBAction func suggestMealButtonClicked(_ sender: Any) {
-        let rec = RecommendationAlgorithm()
-        let bestMeal = rec.recMeal()
-        bestMealLabel.isHidden = false
-        if bestMeal != nil{
-            bestMealLabel.text = "\(bestMeal!.mealName) would best fit your remaining macros, with \(bestMeal!.calories) calories, \(bestMeal!.protein) g of protein, \(bestMeal!.carbs) g of carbs, and \(bestMeal!.fats) g of fat."
-            
-            suggestMealButton.titleLabel?.text = "Suggest another meal!"
-        }
-        else {
-            
-            bestMealLabel.text = "No meal suggestion, you've hit today's macro goals!"
-        }
+        performSegue(withIdentifier: "pickRestaurantToBestMeal", sender: self)
         
         
     }

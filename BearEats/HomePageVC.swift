@@ -66,6 +66,10 @@ class HomePageVC: UIViewController {
         print(tabBarController?.viewControllers![0] as? HomePageVC)
         
         setGreetingLabel()
+        proteinProgressBar.color = .systemBlue
+        caloriesProgressBar.color = .systemGreen
+        fatsProgressBar.color = .systemOrange
+        
         
     }
     
@@ -204,7 +208,5 @@ extension HomePageVC: UITableViewDelegate, UITableViewDataSource {
         return "Today's Meals"
     }
     func numberOfSections(in tableView: UITableView) -> Int { return 1 }
-
-    
     
 }

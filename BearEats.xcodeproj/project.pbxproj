@@ -27,6 +27,7 @@
 		E5C734542CC32E8A003223AF /* BearEatsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C734532CC32E8A003223AF /* BearEatsUITestsLaunchTests.swift */; };
 		E5F0A55F2CC49AF1007F36E1 /* AddMealVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F0A55E2CC49AF1007F36E1 /* AddMealVC.swift */; };
 		E5F0A5642CC49BF1007F36E1 /* OpenAISwift in Frameworks */ = {isa = PBXBuildFile; productRef = E5F0A5632CC49BF1007F36E1 /* OpenAISwift */; };
+		E5F365652CC54F740029FA3E /* BestMealVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F365642CC54F740029FA3E /* BestMealVC.swift */; };
 		E5FD94BC2CC48AD20096F5FD /* PickRestaurantVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5FD94BB2CC48AD20096F5FD /* PickRestaurantVC.swift */; };
 /* End PBXBuildFile section */
 
@@ -71,6 +72,7 @@
 		E5C734512CC32E8A003223AF /* BearEatsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BearEatsUITests.swift; sourceTree = "<group>"; };
 		E5C734532CC32E8A003223AF /* BearEatsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BearEatsUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		E5F0A55E2CC49AF1007F36E1 /* AddMealVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMealVC.swift; sourceTree = "<group>"; };
+		E5F365642CC54F740029FA3E /* BestMealVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestMealVC.swift; sourceTree = "<group>"; };
 		E5FD94BB2CC48AD20096F5FD /* PickRestaurantVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickRestaurantVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -154,6 +156,7 @@
 				E5B7FEBA2CC414CC007C160A /* SettingsVC.swift */,
 				E5FD94BB2CC48AD20096F5FD /* PickRestaurantVC.swift */,
 				E5F0A55E2CC49AF1007F36E1 /* AddMealVC.swift */,
+				E5F365642CC54F740029FA3E /* BestMealVC.swift */,
 				E5C734332CC32E88003223AF /* Main.storyboard */,
 				E5C7343E2CC32E89003223AF /* Info.plist */,
 				E5C734362CC32E88003223AF /* BearEats.xcdatamodeld */,
@@ -316,6 +319,7 @@
 				E5B7FEBB2CC414D0007C160A /* SettingsVC.swift in Sources */,
 				E54E367A2CC373DD00D223AD /* Goals.swift in Sources */,
 				E5C734382CC32E88003223AF /* BearEats.xcdatamodeld in Sources */,
+				E5F365652CC54F740029FA3E /* BestMealVC.swift in Sources */,
 				E53065F02CC5148D00B0D65D /* RecommendationAlgorithm.swift in Sources */,
 				E5C734322CC32E88003223AF /* HomePageVC.swift in Sources */,
 				E589C0622CC33B5500B33B03 /* GradientHorizontalProgressBar.swift in Sources */,

@@ -38,6 +38,11 @@ class AddMealVC: UIViewController {
         mealPicker.dataSource = self
         pickedMeal = mealsList[mealNames[0]]
         updateProgress(meal: pickedMeal!)
+        
+        proteinProgressBar.color = .systemBlue
+        caloriesProgressBar.color = .systemGreen
+        fatsProgressBar.color = .systemOrange
+        
     }
     
     private func updateProgress(meal: Meal) {
