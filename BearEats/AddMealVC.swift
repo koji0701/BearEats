@@ -21,6 +21,7 @@ class AddMealVC: UIViewController {
         
         mealPicker.delegate = self
         mealPicker.dataSource = self
+        pickedMeal = mealsList[mealNames[0]]
     }
     
     func prepareMealsList(incMealsList: [String: Meal]) {

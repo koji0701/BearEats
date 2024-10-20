@@ -11,7 +11,7 @@ import CoreData
 class HomePageVC: UIViewController {
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext //context globally for this
-    
+    let defaults = UserDefaults.standard
     var shouldUpdateProgress = false
     
     var meals = [Meal]()
@@ -114,6 +114,12 @@ class HomePageVC: UIViewController {
         CurrentMacros.protein += addedMeal.protein
         CurrentMacros.fats += addedMeal.fats
         CurrentMacros.carbs += addedMeal.carbs
+        
+        defaults.set(CurrentMacros.calories, forKey: "currentMacrosCalories")
+        defaults.set(CurrentMacros.protein, forKey: "currentMacrosProtein")
+        defaults.set(CurrentMacros.fats, forKey: "currentMacrosFats")
+        defaults.set(CurrentMacros.carbs, forKey: "currentMacrosCarbs")
+
         
         meals.append(addedMeal)
         //MARK: add meal to context
