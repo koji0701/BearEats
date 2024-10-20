@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E503F6472CC35BEF0023B441 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = E503F6462CC35BEF0023B441 /* Meal.swift */; };
+		E53065F02CC5148D00B0D65D /* RecommendationAlgorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53065EF2CC5148300B0D65D /* RecommendationAlgorithm.swift */; };
 		E54E36732CC3663000D223AD /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54E36722CC3663000D223AD /* Restaurant.swift */; };
 		E54E36782CC368F400D223AD /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54E36772CC368EC00D223AD /* Menu.swift */; };
 		E54E367A2CC373DD00D223AD /* Goals.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54E36792CC373DB00D223AD /* Goals.swift */; };
@@ -25,7 +26,6 @@
 		E5C734522CC32E8A003223AF /* BearEatsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C734512CC32E8A003223AF /* BearEatsUITests.swift */; };
 		E5C734542CC32E8A003223AF /* BearEatsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C734532CC32E8A003223AF /* BearEatsUITestsLaunchTests.swift */; };
 		E5F0A55F2CC49AF1007F36E1 /* AddMealVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F0A55E2CC49AF1007F36E1 /* AddMealVC.swift */; };
-		E5F0A5612CC49BB7007F36E1 /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F0A5602CC49BB1007F36E1 /* APICaller.swift */; };
 		E5F0A5642CC49BF1007F36E1 /* OpenAISwift in Frameworks */ = {isa = PBXBuildFile; productRef = E5F0A5632CC49BF1007F36E1 /* OpenAISwift */; };
 		E5FD94BC2CC48AD20096F5FD /* PickRestaurantVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5FD94BB2CC48AD20096F5FD /* PickRestaurantVC.swift */; };
 /* End PBXBuildFile section */
@@ -49,6 +49,7 @@
 
 /* Begin PBXFileReference section */
 		E503F6462CC35BEF0023B441 /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
+		E53065EF2CC5148300B0D65D /* RecommendationAlgorithm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendationAlgorithm.swift; sourceTree = "<group>"; };
 		E54E36722CC3663000D223AD /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
 		E54E36772CC368EC00D223AD /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
 		E54E36792CC373DB00D223AD /* Goals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Goals.swift; sourceTree = "<group>"; };
@@ -70,7 +71,6 @@
 		E5C734512CC32E8A003223AF /* BearEatsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BearEatsUITests.swift; sourceTree = "<group>"; };
 		E5C734532CC32E8A003223AF /* BearEatsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BearEatsUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		E5F0A55E2CC49AF1007F36E1 /* AddMealVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMealVC.swift; sourceTree = "<group>"; };
-		E5F0A5602CC49BB1007F36E1 /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
 		E5FD94BB2CC48AD20096F5FD /* PickRestaurantVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickRestaurantVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -103,7 +103,7 @@
 		E54E36742CC3664F00D223AD /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				E5F0A5602CC49BB1007F36E1 /* APICaller.swift */,
+				E53065EF2CC5148300B0D65D /* RecommendationAlgorithm.swift */,
 				E54E36772CC368EC00D223AD /* Menu.swift */,
 				E503F6462CC35BEF0023B441 /* Meal.swift */,
 				E54E36722CC3663000D223AD /* Restaurant.swift */,
@@ -315,8 +315,8 @@
 				E5F0A55F2CC49AF1007F36E1 /* AddMealVC.swift in Sources */,
 				E5B7FEBB2CC414D0007C160A /* SettingsVC.swift in Sources */,
 				E54E367A2CC373DD00D223AD /* Goals.swift in Sources */,
-				E5F0A5612CC49BB7007F36E1 /* APICaller.swift in Sources */,
 				E5C734382CC32E88003223AF /* BearEats.xcdatamodeld in Sources */,
+				E53065F02CC5148D00B0D65D /* RecommendationAlgorithm.swift in Sources */,
 				E5C734322CC32E88003223AF /* HomePageVC.swift in Sources */,
 				E589C0622CC33B5500B33B03 /* GradientHorizontalProgressBar.swift in Sources */,
 				E54E36732CC3663000D223AD /* Restaurant.swift in Sources */,

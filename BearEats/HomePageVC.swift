@@ -14,7 +14,8 @@ class HomePageVC: UIViewController {
     let defaults = UserDefaults.standard
     var shouldUpdateProgress = false
     
-    var meals = [Meal]()
+    var meals = [MealData]()
+    //var meals = [Meal]()
     /*var meals = [
         Menu.beastcraft.menu["Harvest Slider"],
         Menu.Bergson.menu["Acai Energy"],
@@ -27,6 +28,7 @@ class HomePageVC: UIViewController {
         Menu.Subway.menu["6\" BLT"]
     ]*/
     
+    @IBOutlet weak var greetingLabel: UILabel!
     
     
     @IBOutlet weak var proteinProgressBar: GradientHorizontalProgressBar!
@@ -49,18 +51,41 @@ class HomePageVC: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        fetchMealData()
         refreshProgressBars()
         tableView.delegate = self
         tableView.dataSource = self
         tableView.separatorStyle = .singleLine
-        tableView.insertRows(at: [IndexPath(row: 0, section: 0)], with: .fade)
         
         tableView.reloadData()
         print("controllers")
         print(tabBarController?.viewControllers)
         print(tabBarController?.viewControllers![0] as? HomePageVC)
+        
+        setGreetingLabel()
+        
+    }
+    
+    private func setGreetingLabel() {
+        let greetingMessages = ["Good Morning", "Good Afternoon", "Good Evening"]
+        let emojis = ["🤙", "👻", "👽", "🐥"]
+        let randomNum = Int.random(in: 0..<emojis.count) // Use Int.random(in:) for random number generation
+
+        let hour = Calendar.current.component(.hour, from: Date())
+
+        if hour < 12 {
+            // Morning
+            greetingLabel.text = greetingMessages[0] + " " + emojis[randomNum]
+        } else if hour < 18 {
+            // Afternoon
+            greetingLabel.text = greetingMessages[1] + " " + emojis[randomNum]
+        } else {
+            // Evening
+            greetingLabel.text = greetingMessages[2] + " " + emojis[randomNum]
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -91,22 +116,32 @@ class HomePageVC: UIViewController {
         }
     }
     
-    func fetchContext() {
-        
+    func fetchMealData() {
+        print("Context: \(context)") // This should not be nil
+        let fetchRequest: NSFetchRequest<MealData> = MealData.fetchRequest()
+        let sortDescriptor = NSSortDescriptor(key: "date", ascending: true)
+        fetchRequest.sortDescriptors = [sortDescriptor]
+
+        do {
+            meals = try context.fetch(fetchRequest)
+            tableView.reloadData()
+        } catch {
+            print("Failed to fetch meals: \(error)")
+        }
     }
-    
+
     func refreshProgressBars() {
         proteinProgressBar.progress = CGFloat(CurrentMacros.protein) / CGFloat(Goals.protein)
-        proteinFractionLabel.text = "\(CurrentMacros.protein) / \(Goals.protein)"
+        proteinFractionLabel.text = "\(Int(CurrentMacros.protein+0.5)) / \(Int(Goals.protein+0.5))"
         
         carbsProgressBar.progress = CGFloat(CurrentMacros.carbs) / CGFloat(Goals.carbs)
-        carbsFractionLabel.text = "\(CurrentMacros.carbs) / \(Goals.carbs)"
+        carbsFractionLabel.text = "\(Int(CurrentMacros.carbs+0.5)) / \(Int(Goals.carbs+0.5))"
         
         caloriesProgressBar.progress = CGFloat(CurrentMacros.calories) / CGFloat(Goals.calories)
-        caloriesFractionLabel.text = "\(CurrentMacros.calories) / \(Goals.calories)"
+        caloriesFractionLabel.text = "\(Int(CurrentMacros.calories+0.5)) / \(Int(Goals.calories+0.5))"
         
         fatsProgressBar.progress = CGFloat(CurrentMacros.fats) / CGFloat(Goals.fats)
-        fatsFractionLabel.text = "\(CurrentMacros.fats) / \(Goals.fats)"
+        fatsFractionLabel.text = "\(Int(CurrentMacros.fats+0.5)) / \(Int(Goals.fats+0.5))"
     }
     
     func addMeal(addedMeal: Meal) {
@@ -120,8 +155,19 @@ class HomePageVC: UIViewController {
         defaults.set(CurrentMacros.fats, forKey: "currentMacrosFats")
         defaults.set(CurrentMacros.carbs, forKey: "currentMacrosCarbs")
 
+        let newMeal = MealData(context: self.context)
+        newMeal.calories = addedMeal.calories
+        newMeal.fats = addedMeal.fats
+        newMeal.protein = addedMeal.protein
+        newMeal.date = addedMeal.date
+        newMeal.mealName = addedMeal.mealName
+        newMeal.carbs = addedMeal.carbs
+        newMeal.time = addedMeal.time
         
-        meals.append(addedMeal)
+        meals.append(newMeal)
+        
+        saveContext()
+        
         //MARK: add meal to context
         
         tableView.reloadData()

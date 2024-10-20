@@ -29,7 +29,7 @@
             <objects>
                 <tabBarController id="efS-Uu-cBI" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="Jhs-Ut-2xT"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="s8c-oq-fhw">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" backgroundImage="house.fill" catalog="system" id="s8c-oq-fhw">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -354,10 +354,10 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v4t-VN-HWg" userLabel="Settings">
-                                <rect key="frame" x="375" y="106" width="50" height="50"/>
+                                <rect key="frame" x="395" y="106" width="30" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="IdW-kk-nY6"/>
-                                    <constraint firstAttribute="width" constant="50" id="uTS-HX-wHe"/>
+                                    <constraint firstAttribute="height" constant="30" id="IdW-kk-nY6"/>
+                                    <constraint firstAttribute="width" constant="30" id="uTS-HX-wHe"/>
                                 </constraints>
                                 <color key="tintColor" systemColor="labelColor"/>
                                 <state key="normal" title="Button"/>
@@ -367,7 +367,7 @@
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="UaP-Ov-hsl">
-                                <rect key="frame" x="15" y="497" width="405" height="376"/>
+                                <rect key="frame" x="15" y="463" width="405" height="410"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MealCell" textLabel="Jqd-F2-dIF" detailTextLabel="hxK-LL-J7w" style="IBUITableViewCellStyleValue1" id="MwE-uq-e3J">
@@ -396,22 +396,30 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Good Morning 🌄" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cqY-pL-nGn" userLabel="Greeting">
+                                <rect key="frame" x="15" y="106" width="174.66666666666666" height="27.666666666666657"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="UaP-Ov-hsl" firstAttribute="top" secondItem="GHb-LH-5tr" secondAttribute="bottom" constant="69" id="1r8-0s-rKp"/>
+                            <constraint firstItem="UaP-Ov-hsl" firstAttribute="top" secondItem="GHb-LH-5tr" secondAttribute="bottom" constant="35" id="1r8-0s-rKp"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="v4t-VN-HWg" secondAttribute="trailing" constant="15" id="CHX-Ss-9k3"/>
                             <constraint firstAttribute="trailing" secondItem="GHb-LH-5tr" secondAttribute="trailing" constant="15" id="ENJ-iO-so8"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="UaP-Ov-hsl" secondAttribute="trailing" constant="20" id="FzC-Kf-6Ei"/>
                             <constraint firstItem="UaP-Ov-hsl" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="K7v-Ir-O8L"/>
+                            <constraint firstItem="cqY-pL-nGn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="Osp-2F-UYM"/>
+                            <constraint firstItem="cqY-pL-nGn" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="ctw-O7-e1A"/>
                             <constraint firstItem="v4t-VN-HWg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="mzp-Hi-50J"/>
                             <constraint firstItem="UaP-Ov-hsl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="nmY-Xz-Vyz"/>
                             <constraint firstItem="GHb-LH-5tr" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="45" id="pRo-bZ-bsb"/>
                             <constraint firstItem="GHb-LH-5tr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="x8x-0V-PAR"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="TbU-r0-0o7"/>
+                    <tabBarItem key="tabBarItem" title="" image="house.fill" catalog="system" selectedImage="house.fill" id="TbU-r0-0o7"/>
                     <navigationItem key="navigationItem" id="jCZ-L0-p1p"/>
                     <connections>
                         <outlet property="caloriesFractionLabel" destination="NzR-ub-oi6" id="aEE-bA-75o"/>
@@ -420,6 +428,7 @@
                         <outlet property="carbsProgressBar" destination="Th6-Mu-JrR" id="K11-qy-WWV"/>
                         <outlet property="fatsFractionLabel" destination="Tfd-DM-b8d" id="8Rj-Et-pOt"/>
                         <outlet property="fatsProgressBar" destination="Lv1-dM-Rsf" id="JrL-kM-lBv"/>
+                        <outlet property="greetingLabel" destination="cqY-pL-nGn" id="NDz-wP-pvW"/>
                         <outlet property="proteinFractionLabel" destination="ORw-FV-Y7x" id="Deg-s4-205"/>
                         <outlet property="proteinProgressBar" destination="Krb-ET-stT" id="hYw-v5-agA"/>
                         <outlet property="tableView" destination="UaP-Ov-hsl" id="z91-Xw-bZ2"/>
@@ -571,40 +580,41 @@
             </objects>
             <point key="canvasLocation" x="-2075" y="-456"/>
         </scene>
-        <!--Item-->
+        <!--Pick RestaurantVC-->
         <scene sceneID="vLy-I9-F00">
             <objects>
                 <viewController id="Te7-bI-ZBH" customClass="PickRestaurantVC" customModule="BearEats" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oFM-Sz-TMF">
-                        <rect key="frame" x="0.0" y="0.0" width="440" height="946"/>
+                        <rect key="frame" x="0.0" y="0.0" width="440" height="956"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add a Meal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V33-yh-rQw" userLabel="Add a Meal">
-                                <rect key="frame" x="138.33333333333337" y="0.0" width="163.66666666666663" height="40.666666666666664"/>
+                                <rect key="frame" x="138.33333333333337" y="106" width="163.66666666666663" height="40.666666666666657"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="34"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="33" translatesAutoresizingMaskIntoConstraints="NO" id="1SI-yc-aSV">
-                                <rect key="frame" x="23" y="50.666666666666686" width="394" height="553.33333333333326"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="1SI-yc-aSV">
+                                <rect key="frame" x="15" y="156.66666666666669" width="410" height="554.66666666666652"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="54" translatesAutoresizingMaskIntoConstraints="NO" id="5Mm-Lf-vkM">
-                                        <rect key="frame" x="0.0" y="0.0" width="394" height="140"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="410" height="140"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K5v-Iw-kWV" userLabel="Bear's Den">
+                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K5v-Iw-kWV" userLabel="Bear's Den">
                                                 <rect key="frame" x="0.0" y="0.0" width="170" height="140"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="170" id="EHy-jI-xTY"/>
                                                     <constraint firstAttribute="height" constant="140" id="slh-bT-V6R"/>
                                                 </constraints>
+                                                <color key="tintColor" systemColor="labelColor"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Bear's Den"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="bearsden" imagePlacement="top" title="Bear's Den"/>
                                                 <connections>
                                                     <action selector="bdClicked:" destination="Te7-bI-ZBH" eventType="touchUpInside" id="rX0-m5-UPe"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IjY-at-Nbr">
-                                                <rect key="frame" x="224" y="0.0" width="170" height="140"/>
+                                                <rect key="frame" x="224" y="0.0" width="186" height="140"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="170" id="LGg-8R-ird"/>
                                                     <constraint firstAttribute="height" constant="140" id="ZXx-v3-mkX"/>
@@ -618,7 +628,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="54" translatesAutoresizingMaskIntoConstraints="NO" id="RHa-0N-ZLq">
-                                        <rect key="frame" x="0.0" y="173" width="394" height="140"/>
+                                        <rect key="frame" x="0.0" y="160.00000000000003" width="410" height="139.99999999999997"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UpM-Az-8Vq" userLabel="Bear's Den">
                                                 <rect key="frame" x="0.0" y="0.0" width="170" height="140"/>
@@ -633,7 +643,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Msz-aV-BQV">
-                                                <rect key="frame" x="224" y="0.0" width="170" height="140"/>
+                                                <rect key="frame" x="224" y="0.0" width="186" height="140"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="140" id="WfX-rJ-Gb2"/>
                                                     <constraint firstAttribute="width" constant="170" id="meM-wK-gAZ"/>
@@ -647,22 +657,23 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="54" translatesAutoresizingMaskIntoConstraints="NO" id="SrQ-2T-FFM">
-                                        <rect key="frame" x="0.0" y="346" width="394" height="140"/>
+                                        <rect key="frame" x="0.0" y="320" width="410" height="140"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wY5-Xg-NMR" userLabel="Bear's Den">
+                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wY5-Xg-NMR" userLabel="Beastcraft">
                                                 <rect key="frame" x="0.0" y="0.0" width="170" height="140"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="140" id="P7o-ye-acs"/>
                                                     <constraint firstAttribute="width" constant="170" id="yY0-O0-D4R"/>
                                                 </constraints>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Beastcraft BBQ"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="beastcraft" imagePlacement="top" title="Beastcraft BBQ"/>
                                                 <connections>
                                                     <action selector="beastcraftClicked:" destination="Te7-bI-ZBH" eventType="touchUpInside" id="hpm-ls-DqL"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C6F-5A-F8y">
-                                                <rect key="frame" x="224" y="0.0" width="170" height="140"/>
+                                                <rect key="frame" x="224" y="0.0" width="186" height="140"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="140" id="R1e-zj-KOe"/>
                                                     <constraint firstAttribute="width" constant="170" id="mmH-30-yfc"/>
@@ -676,10 +687,19 @@
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QNp-b2-GXj">
-                                        <rect key="frame" x="0.0" y="519" width="394" height="34.333333333333371"/>
+                                        <rect key="frame" x="0.0" y="480" width="410" height="34.333333333333371"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Suggest a Meal (with AI!)"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Suggest a meal which best suits your macros!"/>
+                                        <connections>
+                                            <action selector="suggestMealButtonClicked:" destination="Te7-bI-ZBH" eventType="touchUpInside" id="Oe9-3y-9Jk"/>
+                                        </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CiV-k2-m9V" userLabel="Best Recommended Meal">
+                                        <rect key="frame" x="0.0" y="534.33333333333337" width="410" height="20.333333333333371"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -687,14 +707,20 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="1SI-yc-aSV" firstAttribute="centerX" secondItem="oFM-Sz-TMF" secondAttribute="centerX" id="0uh-Zv-izi"/>
+                            <constraint firstItem="1SI-yc-aSV" firstAttribute="leading" secondItem="Icc-wG-q8m" secondAttribute="leading" constant="15" id="58L-PD-KPA"/>
                             <constraint firstItem="V33-yh-rQw" firstAttribute="top" secondItem="Icc-wG-q8m" secondAttribute="top" id="Had-Ex-cur"/>
+                            <constraint firstItem="Icc-wG-q8m" firstAttribute="trailing" secondItem="1SI-yc-aSV" secondAttribute="trailing" constant="15" id="MHv-6P-nhB"/>
                             <constraint firstItem="V33-yh-rQw" firstAttribute="centerX" secondItem="oFM-Sz-TMF" secondAttribute="centerX" id="Nk3-zA-6zS"/>
                             <constraint firstItem="1SI-yc-aSV" firstAttribute="top" secondItem="V33-yh-rQw" secondAttribute="bottom" constant="10" id="WIe-5k-fWt"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="dRL-Kd-W7s"/>
+                    <tabBarItem key="tabBarItem" title="" image="plus.app" catalog="system" selectedImage="plus.app" id="dRL-Kd-W7s"/>
                     <navigationItem key="navigationItem" id="xsn-wA-Iy4"/>
                     <connections>
+                        <outlet property="bdButton" destination="K5v-Iw-kWV" id="5ue-TB-6ff"/>
+                        <outlet property="beastcraftButton" destination="wY5-Xg-NMR" id="mle-VF-6Ue"/>
+                        <outlet property="bestMealLabel" destination="CiV-k2-m9V" id="myB-W9-BUr"/>
+                        <outlet property="suggestMealButton" destination="QNp-b2-GXj" id="b0Q-MP-19U"/>
                         <segue destination="A8K-v8-UCI" kind="show" identifier="pickRestaurantToAddMeal" id="znc-C0-lCU"/>
                     </connections>
                 </viewController>
@@ -707,20 +733,20 @@
             <objects>
                 <viewController id="A8K-v8-UCI" customClass="AddMealVC" customModule="BearEats" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="g2X-Ur-Lw6">
-                        <rect key="frame" x="0.0" y="0.0" width="440" height="946"/>
+                        <rect key="frame" x="0.0" y="0.0" width="440" height="956"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Menu Item" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1eh-AY-jAY">
-                                <rect key="frame" x="151.66666666666666" y="0.0" width="136.99999999999997" height="36"/>
+                                <rect key="frame" x="151.66666666666666" y="106" width="136.99999999999997" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gey-AJ-43a">
-                                <rect key="frame" x="0.0" y="56" width="440" height="216"/>
+                                <rect key="frame" x="0.0" y="162" width="440" height="216"/>
                             </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Te-y7-NpW">
-                                <rect key="frame" x="172" y="891" width="96" height="35"/>
+                                <rect key="frame" x="172" y="867" width="96" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Add Meal"/>
                                 <connections>
@@ -747,7 +773,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NX1-9H-8s4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-139.09090909090909" y="-113.59832635983264"/>
+            <point key="canvasLocation" x="-575" y="-110"/>
         </scene>
         <!--Item-->
         <scene sceneID="qep-p2-5pi">
@@ -767,10 +793,14 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="YhF-qn-BwN"/>
+        <segue reference="lWl-IC-rfT"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="bearsden" width="163.33332824707031" height="145.33332824707031"/>
+        <image name="beastcraft" width="183" height="114.66666412353516"/>
         <image name="gearshape" catalog="system" width="128" height="123"/>
+        <image name="house.fill" catalog="system" width="128" height="104"/>
+        <image name="plus.app" catalog="system" width="128" height="114"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

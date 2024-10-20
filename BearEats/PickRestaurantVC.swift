@@ -12,8 +12,27 @@ class PickRestaurantVC: UIViewController {
     
     var menuToSend = [String: Meal]()
 
+    @IBOutlet weak var bdButton: UIButton!
+    
+    @IBOutlet weak var beastcraftButton: UIButton!
+    
+    @IBOutlet weak var bestMealLabel: UILabel!
+    
+    @IBOutlet weak var suggestMealButton: UIButton!
+    @IBAction func suggestMealButtonClicked(_ sender: Any) {
+        let rec = RecommendationAlgorithm()
+        let bestMeal = rec.recMeal()
+        bestMealLabel.isHidden = false
+        bestMealLabel.text = "\(bestMeal.mealName) would best fit your remaining macros, with \(bestMeal.calories) calories, \(bestMeal.protein) g of protein, \(bestMeal.carbs) g of carbs, and \(bestMeal.fats) g of fat."
+        
+        suggestMealButton.titleLabel?.text = "Suggest another meal!"
+        
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        bestMealLabel.isHidden = true
+        
     }
     
     
