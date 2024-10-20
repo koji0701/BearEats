@@ -28,7 +28,7 @@ class BestMealVC: UIViewController {
     @IBOutlet weak var carbsProgressBar: GradientHorizontalProgressBar!
     
     @IBOutlet weak var fatsProgressBar: GradientHorizontalProgressBar!
-    
+    //t
     @IBOutlet weak var proteinFraction: UILabel!
     
     @IBOutlet weak var caloriesFraction: UILabel!

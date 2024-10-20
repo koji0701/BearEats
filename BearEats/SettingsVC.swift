@@ -30,7 +30,7 @@ class SettingsVC: UIViewController {
         fatsTF.text = String(Goals.fats)
         self.initializeHideKeyboard()
     }
-    
+    //t
     @IBAction func caloriesEditingEnd(_ sender: Any) {
         editingDidEnd(tf: caloriesTF, goal: &Goals.calories, key: "goalsCalories")
     }

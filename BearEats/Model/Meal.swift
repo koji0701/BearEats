@@ -7,8 +7,7 @@
 
 import Foundation
 //import SwiftData
-
-
+//t
 //@Model
 struct Meal {
     let calories: Double

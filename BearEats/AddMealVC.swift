@@ -44,7 +44,7 @@ class AddMealVC: UIViewController {
         fatsProgressBar.color = .systemOrange
         
     }
-    
+    //t
     private func updateProgress(meal: Meal) {
         let desiredProtein = max(Goals.protein - CurrentMacros.protein, 0)
         let desiredCarbs = max(Goals.carbs - CurrentMacros.carbs, 0)
