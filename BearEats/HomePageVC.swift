@@ -119,6 +119,13 @@ class HomePageVC: UIViewController {
     func fetchMealData() {
         print("Context: \(context)") // This should not be nil
         let fetchRequest: NSFetchRequest<MealData> = MealData.fetchRequest()
+        // Get the start of the current day
+        let startOfToday = Calendar.current.startOfDay(for: Date())
+        
+        // Set a predicate to filter meals from today onwards
+        fetchRequest.predicate = NSPredicate(format: "date >= %@", startOfToday as NSDate)
+
+        // Sort in descending order by date (most recent meals at the top)
         let sortDescriptor = NSSortDescriptor(key: "date", ascending: true)
         fetchRequest.sortDescriptors = [sortDescriptor]
 
@@ -130,18 +137,19 @@ class HomePageVC: UIViewController {
         }
     }
 
+
     func refreshProgressBars() {
         proteinProgressBar.progress = CGFloat(CurrentMacros.protein) / CGFloat(Goals.protein)
-        proteinFractionLabel.text = "\(Int(CurrentMacros.protein+0.5)) / \(Int(Goals.protein+0.5))"
+        proteinFractionLabel.text = "\(Int(CurrentMacros.protein+0.5)) / \(Int(Goals.protein+0.5))g"
         
         carbsProgressBar.progress = CGFloat(CurrentMacros.carbs) / CGFloat(Goals.carbs)
-        carbsFractionLabel.text = "\(Int(CurrentMacros.carbs+0.5)) / \(Int(Goals.carbs+0.5))"
+        carbsFractionLabel.text = "\(Int(CurrentMacros.carbs+0.5)) / \(Int(Goals.carbs+0.5))g"
         
         caloriesProgressBar.progress = CGFloat(CurrentMacros.calories) / CGFloat(Goals.calories)
-        caloriesFractionLabel.text = "\(Int(CurrentMacros.calories+0.5)) / \(Int(Goals.calories+0.5))"
+        caloriesFractionLabel.text = "\(Int(CurrentMacros.calories+0.5)) / \(Int(Goals.calories+0.5))kcal"
         
         fatsProgressBar.progress = CGFloat(CurrentMacros.fats) / CGFloat(Goals.fats)
-        fatsFractionLabel.text = "\(Int(CurrentMacros.fats+0.5)) / \(Int(Goals.fats+0.5))"
+        fatsFractionLabel.text = "\(Int(CurrentMacros.fats+0.5)) / \(Int(Goals.fats+0.5))g"
     }
     
     func addMeal(addedMeal: Meal) {

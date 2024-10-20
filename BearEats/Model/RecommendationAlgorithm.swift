@@ -14,7 +14,11 @@ class RecommendationAlgorithm {
     
     
     
-    func recMeal() -> Meal {
+    func recMeal() -> Meal? {
+        if CurrentMacros.calories >= Goals.calories && CurrentMacros.carbs >= Goals.carbs && CurrentMacros.protein >= Goals.protein && CurrentMacros.fats >= Goals.fats {
+            return nil //to account for when already over macros
+        }
+        
         if RecommendationAlgorithm.mealsAreSorted {
             return RecommendationAlgorithm.mealsInOrder.removeLast()
             

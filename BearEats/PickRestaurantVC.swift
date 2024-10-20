@@ -23,9 +23,16 @@ class PickRestaurantVC: UIViewController {
         let rec = RecommendationAlgorithm()
         let bestMeal = rec.recMeal()
         bestMealLabel.isHidden = false
-        bestMealLabel.text = "\(bestMeal.mealName) would best fit your remaining macros, with \(bestMeal.calories) calories, \(bestMeal.protein) g of protein, \(bestMeal.carbs) g of carbs, and \(bestMeal.fats) g of fat."
+        if bestMeal != nil{
+            bestMealLabel.text = "\(bestMeal!.mealName) would best fit your remaining macros, with \(bestMeal!.calories) calories, \(bestMeal!.protein) g of protein, \(bestMeal!.carbs) g of carbs, and \(bestMeal!.fats) g of fat."
+            
+            suggestMealButton.titleLabel?.text = "Suggest another meal!"
+        }
+        else {
+            
+            bestMealLabel.text = "No meal suggestion, you've hit today's macro goals!"
+        }
         
-        suggestMealButton.titleLabel?.text = "Suggest another meal!"
         
     }
     override func viewDidLoad() {
